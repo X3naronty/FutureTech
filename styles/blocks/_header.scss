@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.header {
+    &__promo {
+        padding-block: rem(20);
+        &-inner {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-icon {
+            @include desktop {
+                width: 14px;
+                height: auto;
+            }
+        }
+
+        &-link {
+            display: flex;
+            column-gap: 14px;
+            align-items: center;
+        }
+
+        &-description {
+            display: block;
+        }
+    }
+
+    &__body {
+        background-color: var(--color-secondary-background);
+        padding-block: rem(26);
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__nav {
+        &-list {
+            display: flex;
+        }
+
+        &-link {
+            padding: rem(14) rem(20);
+
+            &.is-active {
+                margin-inline: 20px;
+                border: var(--button-border);
+                border-radius: 10px;
+                background-color: var(--color-primary-background);
+            }
+        }
+
+        &-item {
+        }
+    }
+
+    &__overlay {
+        display: contents;
+    }
+}

@@ -1,3 +1,33 @@
+@use 'palette' as *;
+@use 'helpers' as *;
+
 :root {
-	
+	--color-primary-background: #{$dark-08};
+    --color-secondary-background: #{$dark-10};
+    --color-tertiary-background: #{$dark-20};
+
+    --color-primary-border: #{$dark-15};
+    --color-secondary-border: #{$dark-20};
+    --border-radius-primary: 12px;
+    --border-radius-secondary: 8px;
+    
+    --button-border: solid var(--color-primary-border) #{rem(1)};
+    
+    // ordered by frequency
+    --color-primary-foreground: #{$white};
+    --color-secondary-foreground: #{$grey-60};
+    --color-tertiary-foreground: #{$dark-40};
+
+    --color-disabled-foreground: #{$grey-50};
+
+    --color-brand: #{$yellow-55};
+    --color-red: $FF5500;
+
+    --font-family-primary: 'Inter';
+    --font-family-secondary: 'Kumbh Sans'; 
+    
+
+    --container-width: #{rem(1600)};
+    --container-padding-x: #{rem(20)};
+
 }

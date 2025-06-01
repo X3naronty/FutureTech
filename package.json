@@ -1,15 +1,18 @@
 {
-  "name": "FutureTech",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.5.2",
-  "devDependencies": {
-    "sass": "^1.85.1"
-  }
+	"name": "future-tech",
+	"version": "1.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"scripts": {
+		"sass:translate": "sass --watch styles/main.scss styles/main.css",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.29",
+		"chokidar": "^4.0.3",
+		"postcss": "^8.5.4",
+		"postcss-pxtorem": "^6.1.0",
+		"sass": "^1.89.1"
+	}
 }

@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.button {
+    display: flex;
+    border-radius: var(--border-radius-primary);
+    border: var(--button-border);
+    justify-content: center;
+    align-items: center;
+    padding: rem(18) rem(24);
+
+    &_accent {
+        background-color: var(--color-brand);
+        color: var(--color-primary-background);
+        border-color: var(--color-brand);
+        @include hover {
+            background-color: var(--color-secondary-background);
+        }
+    }
+}

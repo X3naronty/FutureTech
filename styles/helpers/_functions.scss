@@ -2,14 +2,14 @@
 
 @function rem($pixel) {
 	@if math.is-unitless($pixel) {
-		@return '#{math.div($pixel, 16)}rem';
+		@return #{math.div($pixel, 16)}+'rem';
 	} @else {
 		@error 'Don\'t use units with function rem() arguments';
 	}
 }
 
 @function fluid($min: 16, $max: 48) {
-  $maxViewportWidth: 1980;
+  $maxViewportWidth: 1920;
   $minViewportWidth: 350;
 
   $maxSize: math.div($max, 16);

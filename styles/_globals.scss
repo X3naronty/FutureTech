@@ -1,6 +1,72 @@
-@use 'utils' as *;
+@use 'helpers' as *;
 
+body {
+    font-family: var(--font-family-primary);
+    background-color: var(--color-primary-background);
+    color: var(--color-secondary-foreground);
+    font-family: var(--font-family-primary);
+    font-size: fluid(14, 18);
+    letter-spacing: -0.03em;
+}
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color-primary-foreground);
+}
 
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+}
 
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+}
 
+h1, .h1 {
+  font-size: fluid(30, 70);
+
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  font-size: fluid(28, 58);
+
+  line-height: 1.3;
+}
+
+h3, .h3 {
+  font-size: fluid(24, 40);
+}
+
+h4, .h4 {
+  font-size: fluid(18, 26);
+}
+
+h5, .h5 {
+  font-size: fluid(18, 24);
+}
+
+h6, .h6 {
+  font-size: fluid(16, 20);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-brand);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}

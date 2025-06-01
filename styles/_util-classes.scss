@@ -1,0 +1,48 @@
+@use 'helpers' as *;
+@use 'variables' as *;
+
+.container {
+    max-width: calc(var(--container-width) + 2 * var(--container-padding-x));
+    padding-inline: var(--container-padding-x);
+    margin-inline: auto;        
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.mobile-hidden {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.mobile-visible {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.tablet-hidden {
+    @include tablet {
+        display: none !important;
+    }
+}
+
+.tablet-visible {
+    @include tablet-above {
+        display: none !important;
+    }
+}
+
+.tablet-s-hidden {
+    @include tablet-s {
+        display: none !important;
+    }
+}
+
+.tablet-s-visible {
+    @include tablet-s-above {
+        display: none !important;
+    }
+}

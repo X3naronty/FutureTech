@@ -1,41 +1,41 @@
 @font-face {
   font-family: "Inter";
-  src: url("Inter24pt-SemiBold.woff2") format("woff2");
+  src: url("/fonts/Inter24pt-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("Inter24pt-Regular.woff2") format("woff2");
+  src: url("/fonts/Inter24pt-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("Inter24pt-Medium.woff2") format("woff2");
+  src: url("/fonts/Inter24pt-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Kumbh Sans";
-  src: url("KumbhSans-Medium.woff2") format("woff2");
+  src: url("/fonts/KumbhSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("Inter24pt-Bold.woff2") format("woff2");
+  src: url("/fonts/Inter24pt-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Kumbh Sans";
-  src: url("KumbhSans-Regular.woff2") format("woff2");
+  src: url("/fonts/KumbhSans-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -113,12 +113,223 @@ svg * {
   transition-property: fill, stroke;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+:root {
+  --color-primary-background: #141414;
+  --color-secondary-background: #1A1A1A;
+  --color-tertiary-background: #333333;
+  --color-primary-border: #262626;
+  --color-secondary-border: #333333;
+  --border-radius-primary: 12px;
+  --border-radius-secondary: 8px;
+  --button-border: solid var(--color-primary-border) 0.0625rem;
+  --color-primary-foreground: #ffffff;
+  --color-secondary-foreground: #99989A;
+  --color-tertiary-foreground: #666666;
+  --color-disabled-foreground: #7E7E81;
+  --color-brand: #FFD114;
+  --color-red: $FF5500;
+  --font-family-primary: "Inter";
+  --font-family-secondary: "Kumbh Sans";
+  --container-width: 100rem;
+  --container-padding-x: 1.25rem;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  background-color: var(--color-primary-background);
+  color: var(--color-secondary-foreground);
+  font-family: var(--font-family-primary);
+  font-size: clamp(0.875rem, 0.8192675159rem + 0.2547770701vw, 1.125rem);
+  letter-spacing: -0.03em;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color-primary-foreground);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: clamp(1.875rem, 1.3176751592rem + 2.5477707006vw, 4.375rem);
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  font-size: clamp(1.75rem, 1.3320063694rem + 1.9108280255vw, 3.625rem);
+  line-height: 1.3;
+}
+
+h3, .h3 {
+  font-size: clamp(1.5rem, 1.2770700637rem + 1.0191082803vw, 2.5rem);
+}
+
+h4, .h4 {
+  font-size: clamp(1.125rem, 1.0135350318rem + 0.5095541401vw, 1.625rem);
+}
+
+h5, .h5 {
+  font-size: clamp(1.125rem, 1.0414012739rem + 0.3821656051vw, 1.5rem);
+}
+
+h6, .h6 {
+  font-size: clamp(1rem, 0.9442675159rem + 0.2547770701vw, 1.25rem);
+}
+
+a {
+  color: inherit;
+}
+@media (any-hover: hover) {
+  a:hover {
+    color: var(--color-brand);
+  }
+}
+@media (any-hover: none) {
+  a:active {
+    color: var(--color-brand);
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(var(--container-width) + 2 * var(--container-padding-x));
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 780.98px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 781px) {
+  .mobile-visible {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1080.98px) {
+  .tablet-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1081px) {
+  .tablet-visible {
+    display: none !important;
+  }
+}
+
+@media (max-width: 920.98px) {
+  .tablet-s-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 921px) {
+  .tablet-s-visible {
+    display: none !important;
+  }
+}
+
+.header__promo {
+  padding-block: 1.25rem;
+}
+.header__promo-inner {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1280.98px) {
+  .header__promo-icon {
+    width: 14px;
+    height: auto;
+  }
+}
+.header__promo-link {
+  display: flex;
+  column-gap: 14px;
+  align-items: center;
+}
+.header__promo-description {
+  display: block;
+}
+.header__body {
+  background-color: var(--color-secondary-background);
+  padding-block: 1.625rem;
+}
+.header__body-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-link {
+  padding: 0.875rem 1.25rem;
+}
+.header__nav-link.is-active {
+  margin-inline: 20px;
+  border: var(--button-border);
+  border-radius: 10px;
+  background-color: var(--color-primary-background);
+}
+.header__overlay {
+  display: contents;
+}
+
+.button {
+  display: flex;
+  border-radius: var(--border-radius-primary);
+  border: var(--button-border);
+  justify-content: center;
+  align-items: center;
+  padding: 1.125rem 1.5rem;
+}
+.button_accent {
+  background-color: var(--color-brand);
+  color: var(--color-primary-background);
+  border-color: var(--color-brand);
+}
+@media (any-hover: hover) {
+  .button_accent:hover {
+    background-color: var(--color-secondary-background);
+  }
+}
+@media (any-hover: none) {
+  .button_accent:active {
+    background-color: var(--color-secondary-background);
   }
 }
 
