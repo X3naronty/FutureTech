@@ -6,6 +6,8 @@ body {
     color: var(--color-secondary-foreground);
     font-family: var(--font-family-primary);
     font-size: fluid(14, 18);
+    font-weight: 400;
+
     letter-spacing: -0.03em;
 }
 
@@ -69,4 +71,18 @@ a {
   &[class] {
     text-decoration: none;
   }
+}
+
+a[class] {
+    display: inline-flex;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
 }

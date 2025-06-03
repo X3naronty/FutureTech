@@ -2,11 +2,21 @@
 
 .button {
     display: flex;
+
     border-radius: var(--border-radius-primary);
     border: var(--button-border);
+
     justify-content: center;
     align-items: center;
+
     padding: rem(18) rem(24);
+    font-weight: 500;
+
+    letter-spacing: 0;
+    
+    @include laptop {
+        padding: rem(10) rem(15);
+    }
 
     &_accent {
         background-color: var(--color-brand);
@@ -14,6 +24,14 @@
         border-color: var(--color-brand);
         @include hover {
             background-color: var(--color-secondary-background);
+        }
+    }
+    
+    &_small-padding {
+        padding: rem(14) rem(20);
+
+        @include laptop {
+            padding: rem(10) rem(15);
         }
     }
 }

@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.burger-button {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: none;
+    padding: 0;
+
+
+    &__line {
+        width: 100%;
+        border-top: 2px solid var(--color-primary-foreground);
+        border-radius: 4px;
+        display: block;
+
+        &:last-child {
+            width: 55%;
+            align-self: flex-end;
+        }
+    }
+}

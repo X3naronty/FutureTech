@@ -23,18 +23,6 @@
     }
 }
 
-.tablet-hidden {
-    @include tablet {
-        display: none !important;
-    }
-}
-
-.tablet-visible {
-    @include tablet-above {
-        display: none !important;
-    }
-}
-
 .tablet-s-hidden {
     @include tablet-s {
         display: none !important;

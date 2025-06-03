@@ -3,21 +3,36 @@
 .header {
     &__promo {
         padding-block: rem(20);
+
+        @include laptop {
+            padding-block: rem(12);
+        }
+
         &-inner {
             display: flex;
             justify-content: center;
+
+            @include tablet {
+                padding-inline: rem(24);
+            }
         }
 
         &-icon {
-            @include desktop {
-                width: 14px;
-                height: auto;
+            min-width: 12px;
+            max-width: 20px;
+
+            width: rem(17);
+            height: auto;
+            flex-shrink: 0;
+
+            @include laptop {
+                width: rem(14);
             }
         }
 
         &-link {
             display: flex;
-            column-gap: 14px;
+            column-gap: rem(14);
             align-items: center;
         }
 
@@ -26,38 +41,82 @@
         }
     }
 
+    &__home-icon {
+        width: fluid(126, 179);
+        height: auto;
+    }
+
     &__body {
         background-color: var(--color-secondary-background);
-        padding-block: rem(26);
+        padding-block: rem(24);
+
+        @include laptop {
+            padding-block: rem(20);
+        }
 
         &-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include tablet {
+                padding-inline: rem(16);
+            }
         }
     }
 
+    &__contact-us-link {
+        padding: rem(15) rem(10);
+    }
+
+    &__burger-button {
+        width: rem(26);
+        height: rem(17);
+    }
+
     &__nav {
+        letter-spacing: 0;
+        color: var(--color-disabled-foreground);
+
         &-list {
             display: flex;
         }
 
         &-link {
             padding: rem(14) rem(20);
+            height: 100%;
 
             &.is-active {
-                margin-inline: 20px;
+                padding-inline: rem(24);
                 border: var(--button-border);
-                border-radius: 10px;
+                border-radius: rem(10);
                 background-color: var(--color-primary-background);
+                font-weight: 500;
+                color: white;
+                pointer-events: none;
             }
         }
 
         &-item {
+            &:has(.is-active) {
+               margin-inline: rem(20);
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 
     &__overlay {
         display: contents;
+
+        @include tablet-s {
+            display: none;
+        }
     }
 }

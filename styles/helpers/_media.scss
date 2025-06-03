@@ -1,106 +1,63 @@
-$desktop-above: 1281px;
-$desktop: 1280.98px;
+@use 'functions' as *;
 
-$desktop-s-above: 1161px;
-$desktop-s: 1160.98px;
+$laptop-above: 1441;
+$laptop: 1440.98;
 
-$tablet-above: 1081px;
-$tablet: 1080.98px;
+$tablet-above: 1081;
+$tablet: 1080.98;
 
-$tablet-s-above: 921px;
-$tablet-s: 920.98px;
+$tablet-s-above: 768;
+$tablet-s: 767.98;
 
-$mobile-above: 781px;
-$mobile: 780.98px;
+$mobile-above: 391;
+$mobile: 390.98;
 
-$mobile-m-above: 601px;
-$mobile-m: 600.98px;
+@mixin laptop-above{
+    @media (min-width: rem($laptop-above)){
+        @content;
+    }
+} 
 
-$mobile-s-above: 481px;
-$mobile-s: 480.98px;
-
-@mixin desktop-above {
-  @media (min-width: $desktop-above) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (max-width: $desktop) {
-    @content;
-  }
-}
-
-@mixin desktop-s-above {
-  @media (min-width: $desktop-s-above) {
-    @content;
-  }
-}
-
-@mixin desktop-s {
-  @media (max-width: $desktop-s) {
-    @content;
-  }
+@mixin laptop {
+    @media (max-width: rem($laptop)) {
+        @content;
+    }
 }
 
 @mixin tablet-above {
-  @media (min-width: $tablet-above) {
-    @content;
-  }
+    @media (min-width: rem($tablet-above)) {
+        @content;
+    }
 }
 
 @mixin tablet {
-  @media (max-width: $tablet) {
-    @content;
-  }
+    @media (max-width: rem($tablet)) {
+        @content;
+    }
 }
 
 @mixin tablet-s-above {
-  @media (min-width: $tablet-s-above) {
-    @content;
-  }
+    @media (min-width: rem($tablet-s-above)) {
+        @content;
+    }
 }
 
 @mixin tablet-s {
-  @media (max-width: $tablet-s) {
-    @content;
-  }
+    @media (max-width: rem($tablet-s)) {
+        @content;
+    }
 }
 
 @mixin mobile-above {
-  @media (min-width: $mobile-above) {
-    @content;
-  }
+    @media (min-width: rem($mobile-above)) {
+        @content;
+    }
 }
 
 @mixin mobile {
-  @media (max-width: $mobile) {
-    @content;
-  }
-}
-
-@mixin mobile-m-above {
-  @media (min-width: $mobile-m-above) {
-    @content;
-  }
-}
-
-@mixin mobile-m {
-  @media (max-width: $mobile-m) {
-    @content;
-  }
-}
-
-@mixin mobile-s-above {
-  @media (min-width: $mobile-s-above) {
-    @content;
-  }
-}
-
-@mixin mobile-s {
-  @media (max-width: $mobile-s) {
-    @content;
-  }
+    @media (max-width: rem($mobile)) {
+        @content;
+    }
 }
 
 @mixin hover {
