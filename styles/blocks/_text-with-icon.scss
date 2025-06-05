@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.text-with-icon {
+    display: flex;
+    column-gap: rem(10);
+    &::after {
+        content: "";
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; 
+        width: var(--iconWidth);
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    &.top-right-yellow-arrow::after {
+        background-image: url('../icons/top-right-arrow.svg');
+    }
+}

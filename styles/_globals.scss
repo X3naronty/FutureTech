@@ -9,6 +9,8 @@ body {
     font-weight: 400;
 
     letter-spacing: -0.03em;
+
+    --iconWidth: 1em;
 }
 
 h1, .h1,
@@ -73,7 +75,7 @@ a {
   }
 }
 
-a[class] {
+a:where([class]) {
     display: inline-flex;
 }
 

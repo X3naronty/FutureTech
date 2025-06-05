@@ -1,0 +1,9 @@
+.icon-with-hover {
+    & :where([fill]) {
+        fill: currentColor;
+    }
+
+    & :where([stroke]) {
+        stroke: currentColor;
+    }
+}

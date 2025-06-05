@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.mobile-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    overflow-x: hidden;
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: rem(25);
+        background-color: var(--color-primary-background);
+        font-size: rem(18);
+        animation-name: move;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-delay: 1ms;
+        animation-fill-mode: forwards;
+        translate: 100%;
+        // visibility: hidden;
+
+        @keyframes move {
+            from {
+                visibility: visible;
+                translate: 100%;
+            }
+            to {
+                visibility: visible;
+                translate: 0%;
+            }
+        }
+    }
+    &__nav {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            row-gap: rem(6);
+        }
+
+        &-link {
+            padding: rem(5);
+        }
+    }
+
+    &__close-button {
+    }
+
+    &__contact-us-button {
+        width: 50%;
+    }
+}

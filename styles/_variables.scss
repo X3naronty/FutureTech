@@ -26,9 +26,14 @@
     --font-family-primary: 'Inter';
     --font-family-secondary: 'Kumbh Sans'; 
     
+    --badge-gradient: linear-gradient(
+        45deg,
+        var(--color-primary-border) 64%,
+        var(--color-brand) 136%
+      );
 
     --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(20)};
+    --container-padding-x: #{rem(16)};
 
     --transition-duration: 0.2s;
 }

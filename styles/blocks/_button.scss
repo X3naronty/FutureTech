@@ -14,24 +14,38 @@
 
     letter-spacing: 0;
     
+    background-color: var(--color-primary-background);
+    
     @include laptop {
         padding: rem(10) rem(15);
+        font-size: rem(14);
+    }
+
+    &:hover {
+        background-color: var(--color-secondary-background);
+        border-color: var(--color-brand);
     }
 
     &_accent {
         background-color: var(--color-brand);
         color: var(--color-primary-background);
         border-color: var(--color-brand);
-        @include hover {
-            background-color: var(--color-secondary-background);
-        }
-    }
-    
-    &_small-padding {
+
         padding: rem(14) rem(20);
 
         @include laptop {
             padding: rem(10) rem(15);
+        }
+        @include hover {
+            background-color: var(--color-secondary-background);
+        }
+    }
+
+    &_small-padding {
+        padding: rem(10) rem(16);
+
+        @include laptop {
+            padding: rem(8) rem(14);
         }
     }
 }
