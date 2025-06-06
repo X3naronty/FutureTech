@@ -9,12 +9,39 @@
     padding: 0;
     width: rem(26);
     height: rem(17);
+    
+    position: relative;
+
+    color: var(--color-primary-foreground);
+
+    @include hover {
+        color: var(--color-brand);
+    }
+    
+      &.is-active {
+        .burger-button__line {
+          &:first-child {
+            rotate: 45deg;
+            transform-origin: 0;
+            translate: 0.25em -0.1em;
+          }
+    
+          &:nth-child(2) {
+            rotate: -45deg;
+          }
+    
+          &:last-child {
+            width: 0;
+          }
+        }
+      }
 
     &__line {
         width: 100%;
-        border-top: 2px solid var(--color-primary-foreground);
-        border-radius: 4px;
+        border-top: rem(3) solid currentColor;
+        border-radius: rem(4);
         display: block;
+        transition-duration: var(--transition-duration);
 
         &:last-child {
             width: 55%;

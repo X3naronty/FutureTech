@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>FutureTech | Home</title>
         <link rel="stylesheet" href="styles/main.css" />
+        <script type="module" src="./scripts/main.js"></script>
     </head>
     <body>
         <div class="content">
-            <header class="header">
+            <header class="header" data-js-header>
                 <div class="header__promo">
                     <div class="header__promo-inner container">
                         <a href="" class="header__promo-link">
@@ -26,7 +27,6 @@
                         <a
                             class="header__home-link"
                             href="/"
-                            aria-label="Go to home page"
                             title="Go to home page"
                         >
                             <svg
@@ -111,50 +111,51 @@
                                 />
                             </svg>
                         </a>
-                        <nav class="header__nav tablet-s-hidden">
-                            <ul class="header__nav-list">
-                                <li class="header__nav-item">
-                                    <a
-                                        href="/"
-                                        class="header__nav-link is-active"
-                                    >
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">
-                                        News
-                                    </a>
-                                </li>
-                                <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">
-                                        Podcasts
-                                    </a>
-                                </li>
-                                <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">
-                                        Resources
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <a
-                            href="/"
-                            class="button button_accent tablet-s-hidden"
-                        >
-                            Contact Us
-                        </a>
-
                         <button
                             class="header__burger-button burger-button tablet-s-visible"
-                            aria-label="Open navigation menu"
-                            title="Open navigation menu"
-                            data-js-modal-open-button
+                            title="Toggle navigation menu"
+                            aria-expanded="false"
+                            data-js-burger-button
                         >
                             <span class="burger-button__line"></span>
                             <span class="burger-button__line"></span>
                             <span class="burger-button__line"></span>
                         </button>
+                        <div
+                            class="header__overlay"
+                            data-js-overlay
+                        >
+                            <nav class="header__nav">
+                                <ul class="header__nav-list">
+                                    <li class="header__nav-item">
+                                        <a
+                                            href="/"
+                                            class="header__nav-link is-active"
+                                        >
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="/" class="header__nav-link">
+                                            News
+                                        </a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="/" class="header__nav-link">
+                                            Podcasts
+                                        </a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="/" class="header__nav-link">
+                                            Resources
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a href="/" class="header__contact-us-link button button_accent">
+                                Contact Us
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -499,7 +500,7 @@
                 </div>
             </footer>
         </div>
-        <dialog class="mobile-overlay tablet-s-visible">
+        <!-- <dialog class="mobile-overlay tablet-s-visible">
             <div class="mobile-overlay__inner">
                 <button
                     class="mobile-overlay__close-button burger-button"
@@ -544,21 +545,6 @@
                     Contact Us
                 </a>
             </div>
-        </dialog>
-        <script>
-            var modal = document.querySelector('.mobile-overlay');
-            var closeButton = document.querySelector(
-                '[data-js-modal-close-button]'
-            );
-            var openButton = document.querySelector('[data-js-modal-open-button]');
-            closeButton.onclick = () => {
-                modal.close();
-            };
-            openButton.onclick = () => {
-                modal.showModal();
-            };
-            
-            
-        </script>
+        </dialog> -->
     </body>
 </html>
