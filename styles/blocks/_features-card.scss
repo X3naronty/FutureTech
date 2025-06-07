@@ -1,0 +1,68 @@
+@use '../helpers' as *;
+
+.features-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(10, 30);
+    padding-block: rem(50);
+   
+    
+    @include laptop {
+        padding-block: rem(40);
+    }
+
+    @include tablet {
+        padding-block: rem(30);
+    }
+  
+
+    &__icon {
+        @include laptop {
+            width: rem(40);
+        }
+        @include mobile {
+            margin-bottom: rem(6);
+            width: rem(30);
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'title icon'
+            'description icon';
+        row-gap: fluid(2, 4);
+        justify-content: space-between;
+        align-items: center;
+
+        &:after {
+            content: '';
+            width: rem(52);
+            aspect-ratio: 1;
+            background-image: url('../../icons/hero/features-icon.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            grid-area: icon;
+
+            @include laptop {
+                width: rem(44);
+            }
+
+            @include mobile {
+                width: rem(40);
+            }
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        font-weight: 500;
+    }
+
+    &__description {
+        grid-area: description;
+        color: var(--color-disabled-foreground);
+    }
+}

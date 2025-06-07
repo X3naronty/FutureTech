@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+.metrics-card {
+    display: inline-flex;
+    flex-direction: column-reverse;
+  
+    row-gap: fluid(0, 10);   
+
+    &__value {
+        font-weight: 600;
+        &_accent {
+            display: inline-block;
+            color: var(--color-brand);
+        }
+    }
+}

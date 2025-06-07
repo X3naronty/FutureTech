@@ -19,6 +19,7 @@ body {
     letter-spacing: -0.03em;
 
     --iconWidth: 1em;
+    --contentWidth: 100%;
 }
 
 h1,
@@ -113,4 +114,8 @@ textarea,
 select,
 svg * {
     transition-duration: var(--transition-duration);
+}
+
+svg {
+    height: auto;
 }

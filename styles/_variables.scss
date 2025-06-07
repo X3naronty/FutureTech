@@ -11,7 +11,8 @@
     --border-radius-primary: 12px;
     --border-radius-secondary: 8px;
     
-    --button-border: solid var(--color-primary-border) #{rem(1)};
+    --button-border: #{rem(1)} solid var(--color-primary-border);
+    --primary-border: #{rem(1)} solid var(--color-primary-border);
     
     // ordered by frequency
     --color-primary-foreground: #{$white};

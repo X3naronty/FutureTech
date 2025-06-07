@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
 
-            @include tablet {
+            @include mobile {
                 padding-inline: rem(24);
             }
         }
@@ -33,7 +33,6 @@
 
     &__home-icon {
         width: fluid(126, 179);
-        height: auto;
     }
 
     &__body {
@@ -53,8 +52,10 @@
 
     &__contact-us-link {
         padding: rem(15) rem(10);
-        width: 100%;
-        max-width: rem(250);
+        @include tablet-s {
+            width: 100%;
+            max-width: rem(250);
+        }
     }
 
     &__nav {
@@ -130,7 +131,7 @@
                 animation-fill-mode: forwards;
                 animation-duration: 0.5s;
                 animation-timing-function: cubic-bezier(0.29, -1.5, 0.68, 2);
-                
+
                 @keyframes move-left {
                     to {
                         translate: 0;

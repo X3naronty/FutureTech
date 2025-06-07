@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.team {
+    background-color: var(--color-secondary-background);
+    border: rem(2) solid var(--color-primary-border);
+    border-radius: rem(100);
+    padding: rem(10);
+
+    @include laptop {
+        padding: rem(8);
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-left: calc(var(--imageWidth) / 4 * -1);
+        }
+    }
+
+    &__image {
+        border-radius: 100%;
+        border: rem(2) solid var(--color-tertiary-foreground);
+        width: var(--imageWidth);
+        height: auto;
+    }
+}
