@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+
+.blog-card {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 24% 1fr auto;
+    grid-template-areas: 
+        'person body .'
+        '. body link'
+        '. body .';
+    padding-block: fluid(40, 80);
+    column-gap: rem(50);
+
+    @include laptop {
+        column-gap: rem(40);
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr auto;
+        grid-template-areas: 
+            'person link'
+            'body body';
+        gap: rem(25);
+    }
+
+    &__body {
+        grid-area: body;
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(20, 30);
+    }
+
+    &__info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(4, 10);
+    }
+    
+    &__date {
+        grid-area: date;
+        font-size: fluid(16, 20);
+        font-weight: 600;
+    }
+    
+    &__actions {
+        grid-area: actions;
+    }
+    
+    &__link {
+        grid-area: link;
+    }
+}

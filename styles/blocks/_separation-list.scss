@@ -1,0 +1,7 @@
+@use '../helpers' as *;
+
+.separation-list {
+    &__item:not(:last-child) {
+        border-bottom: var(--primary-border);
+    }
+}

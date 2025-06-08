@@ -1,0 +1,70 @@
+@use '../helpers/' as *;
+
+.content-card {
+    display: flex;
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__icon {
+        width: fluid(50, 80);
+    }
+
+    &__body {
+        padding-block: rem(80);
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        gap: fluid(10, 30);
+
+        @include laptop {
+            padding-block: rem(60)
+        }
+
+        @include laptop-above {
+            padding-left: rem(80);
+        }
+        @include tablet-above {
+            padding-left: rem(60);
+        }
+        @include tablet {
+            padding-block: rem(30);
+            padding-inline: rem(16);
+        }
+
+        @include tablet-s {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__header {
+        padding-block: rem(155);
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(20, 50);
+        flex-shrink: 0;
+
+        @include laptop {
+            padding-block: rem(122.5);
+        }
+        @include laptop-above {
+            padding-right: rem(80);
+        }
+        @include tablet-above {
+            padding-right: rem(60);
+            border-right: var(--primary-border);
+            width: 37.5% !important;
+        }
+        @include tablet {
+            padding-block: rem(50);
+            border-bottom: var(--primary-border);
+        }
+        
+        &-main {
+            display: flex;
+            flex-direction: column;
+            row-gap: fluid(6, 16);
+        }
+    }
+}

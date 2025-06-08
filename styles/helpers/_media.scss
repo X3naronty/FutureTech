@@ -3,6 +3,9 @@
 $laptop-above: 1441;
 $laptop: 1440.98;
 
+$laptop-s-above: 1181;
+$laptop-s: 1180.98;
+
 $tablet-above: 961;
 $tablet: 960.98;
 
@@ -20,6 +23,18 @@ $mobile: 390.98;
 
 @mixin laptop {
     @media (max-width: rem($laptop)) {
+        @content;
+    }
+}
+
+@mixin laptop-s-above{
+    @media (min-width: rem($laptop-s-above)){
+        @content;
+    }
+} 
+
+@mixin laptop-s {
+    @media (max-width: rem($laptop-s)) {
         @content;
     }
 }

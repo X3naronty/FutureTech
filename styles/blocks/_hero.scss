@@ -43,7 +43,7 @@
         @include laptop {
             margin-bottom: rem(20);
         }
-        
+
         @include mobile {
             margin-bottom: rem(14);
         }
@@ -55,7 +55,7 @@
         @include laptop {
             margin-bottom: rem(14);
         }
-        
+
         @include mobile {
             margin-bottom: rem(10);
         }
@@ -98,6 +98,7 @@
             flex-grow: 1;
             padding: rem(50);
 
+            padding-right: 0;
             @include laptop {
                 padding: rem(30) rem(40);
             }
@@ -109,7 +110,6 @@
                 @include tablet-above {
                     padding-right: var(--container-padding-x);
                 }
-                padding-right: 0;
             }
 
             &:first-child {

@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.person-card {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(8, 16);
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 1;
+
+        @include tablet-above {
+            row-gap: rem(2);
+        }
+    }
+
+    &__image {
+        width: fluid(60, 80);
+        background-color: #262626;
+        border-radius: 100%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    &__name {
+        color: var(--color-primary-foreground);
+        font-weight: 500;
+        font-size: fluid(18, 20);
+    }
+    
+    &__description {
+        grid-area: description;
+    }
+}

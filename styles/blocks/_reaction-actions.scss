@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.reaction-actions {
+    display: flex;
+
+    column-gap: fluid(8, 10);
+    
+    &__item {
+        --fillColor: transparent;
+        --strokeColor: currentColor;
+
+        border-radius: rem(100);
+        display: flex;
+        align-items: center;
+        column-gap: rem(4);
+
+        padding-block: fluid(6, 8);
+        padding-inline: fluid(12, 18);
+
+        background-color: var(--color-secondary-background);
+        border: var(--button-border);
+        color: inherit;
+        
+        &:hover {
+            color: var(--color-brand);
+            border-color: currentColor;   
+        }
+
+        &.is-active {
+            --fillColor: red;
+            --strokeColor: red;
+        }
+    }
+
+    &__icon {
+        & path {
+            fill: var(--fillColor);
+            stroke: var(--strokeColor);
+        }
+      
+    }
+}
