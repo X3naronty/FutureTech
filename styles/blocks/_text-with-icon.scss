@@ -16,4 +16,8 @@
     &.top-right-yellow-arrow::after {
         background-image: url('../icons/top-right-arrow.svg');
     }
+
+    &.yellow-eye::after {
+        background-image: url('../../icons/yellow-eye.svg');
+    }
 }

@@ -25,9 +25,17 @@
         }
         
         &-inner {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto; 
             align-items: center;
+            gap: rem(30);
+            @include tablet-s {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-actions {
+            flex-shrink: 0;
         }
     }
 }

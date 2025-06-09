@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.reviews-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: content-box;
+    max-width: rem(465);
+
+    padding-block: rem(80);
+    padding-inline: var(--paddingInline);
+    margin-left: var(--reviewMarginLeft);
+}

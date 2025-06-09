@@ -8,8 +8,9 @@
 
     --color-primary-border: #{$dark-15};
     --color-secondary-border: #{$dark-20};
-    --border-radius-primary: 12px;
-    --border-radius-secondary: 8px;
+    --border-radius-primary: #{rem(12)};
+    --border-radius-secondary: #{rem(8)};
+    --border-radius-tertiary: #{rem(10)};
     
     --button-border: #{rem(1)} solid var(--color-primary-border);
     --primary-border: #{rem(1)} solid var(--color-primary-border);

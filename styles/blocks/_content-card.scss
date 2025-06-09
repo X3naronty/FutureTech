@@ -1,40 +1,65 @@
 @use '../helpers/' as *;
 
 .content-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: 37.5% 1fr;
+
     @include tablet {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
-    &__icon {
-        width: fluid(50, 80);
+    &__area {
+        &-image {
+            border-radius: var(--border-radius-primary);
+            width: 100%;
+        }
+
+        &_wide {
+            grid-column: -1 / 1;
+        }
+    }
+
+    &__team {
+        --imageWidth: #{rem(50)};
+
+        @include laptop {
+            --imageWidth: #{rem(40)};
+        }
     }
 
     &__body {
         padding-block: rem(80);
-        
+
         display: grid;
         grid-template-columns: 1fr 1fr;
-        
+
+        align-items: center;
+
         gap: fluid(10, 30);
 
         @include laptop {
-            padding-block: rem(60)
+            padding-block: rem(60);
         }
-
-        @include laptop-above {
-            padding-left: rem(80);
+        @include tablet {
+            padding-block: rem(40);
+        }
+        @include tablet-s {
+            grid-template-columns: 1fr;
         }
         @include tablet-above {
             padding-left: rem(60);
         }
-        @include tablet {
-            padding-block: rem(30);
-            padding-inline: rem(16);
+        @include laptop-above {
+            padding-left: rem(80);
         }
 
-        @include tablet-s {
-            grid-template-columns: 1fr;
+        &_auto-fr {
+            grid-template-columns: auto 1fr;
+            
+            @include tablet-s {
+                grid-template-columns: 1fr;
+                row-gap: rem(24);
+            }
         }
     }
 
@@ -42,29 +67,68 @@
         padding-block: rem(155);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         row-gap: fluid(20, 50);
-        flex-shrink: 0;
 
         @include laptop {
             padding-block: rem(122.5);
-        }
-        @include laptop-above {
-            padding-right: rem(80);
-        }
-        @include tablet-above {
-            padding-right: rem(60);
-            border-right: var(--primary-border);
-            width: 37.5% !important;
         }
         @include tablet {
             padding-block: rem(50);
             border-bottom: var(--primary-border);
         }
-        
+        @include tablet-s {
+            padding-block: rem(40);
+        }
+        @include tablet-above {
+            padding-right: rem(60);
+            border-right: var(--primary-border);
+        }
+        @include laptop-above {
+            padding-right: rem(80);
+        }
+
+        &-downloads {
+            display: inline-flex;
+            align-items: center;
+            column-gap: rem(50);
+            background-color: var(--color-secondary-background);
+            padding: rem(30);
+            border-radius: var(--border-radius-primary);
+            border: var(--primary-border);
+            align-self: start;
+            flex-wrap: wrap;
+            row-gap: rem(10);
+
+            @include laptop {
+                padding: rem(20);
+                column-gap: rem(30);
+            }
+            @include tablet-s {
+                padding-inline: rem(30);
+            }
+
+            &-description {
+                font-size: fluid(14, 18);
+                color: var(--color-secondary-foreground);
+                font-weight: 400;
+            }
+        }
+
+        &-info {
+            row-gap: fluid(6, 16);
+        }
         &-main {
             display: flex;
             flex-direction: column;
-            row-gap: fluid(6, 16);
+            row-gap: fluid(24, 50);
+            @include tablet {
+                align-items: start;
+            }
+        }
+
+        &-icon {
+            width: fluid(40, 64);
         }
     }
 }

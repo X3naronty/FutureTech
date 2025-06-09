@@ -26,4 +26,10 @@
         width: var(--imageWidth);
         height: auto;
     }
+    
+    &_alt {
+        border-radius: rem(12);
+        background-color: var(--color-primary-background);
+        border: none;
+    }
 }

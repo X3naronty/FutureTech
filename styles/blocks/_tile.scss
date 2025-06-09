@@ -6,6 +6,23 @@
     border-radius: var(--border-radius-primary);
     border: var(--primary-border);
     display: flex;
-    flex-direction: column;
-    row-gap: fluid(4, 20);
+    justify-content: space-between;
+    align-items: center;
+    
+    &__description {
+        color: var(--color-secondary-foreground);
+        font-size: fluid(14, 18);
+        font-weight: 400;
+        font-family: 'Inter';
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(4, 20);
+        
+        &_small-gap {
+            row-gap: fluid(2, 4);
+        }
+    }
 }

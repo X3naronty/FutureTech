@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.rating {
+    background-color: var(--color-primary-background);
+    border-radius: rem(100);
+    border: var(--primary-border);
+    padding-block: fluid(8, 10);
+    padding-inline: fluid(12, 16);
+    
+    &__list {
+        display: flex;
+        column-gap: fluid(4, 8);
+        align-items: center;
+    }
+
+    &__item {
+        display: inline-flex;
+    }
+}

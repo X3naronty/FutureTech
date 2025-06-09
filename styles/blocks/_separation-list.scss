@@ -1,7 +1,37 @@
 @use '../helpers' as *;
 
 .separation-list {
-    &__item:not(:last-child) {
-        border-bottom: var(--primary-border);
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    &_grid-1-col {
+        & .separation-list__item:not(:last-child) {
+            border-bottom: var(--primary-border);
+        }
+    }
+
+    &_grid-3-cols {
+        grid-template-columns: 1fr auto 1fr;
+
+        --reviewMarginLeft: 0;
+        --paddingInline: #{rem(50)};
+
+        & .separation-list__item:not(:nth-child(3n)) {
+            border-right: var(--primary-border);
+        }
+
+        & .separation-list__item:not(:nth-last-child(-n + 3)) {
+            border-bottom: var(--primary-border);
+        }
+        
+        & .separation-list__item:nth-child(3n+1) {
+            --reviewMarginLeft: auto;
+            --paddingInline: var(--container-padding-x) #{rem(50)};
+        }
+
+        & .separation-list__item:nth-child(3n) {
+            --paddingInline: #{rem(50)} var(--container-padding-x);
+        }
     }
 }
