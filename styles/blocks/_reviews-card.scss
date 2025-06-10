@@ -4,11 +4,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    row-gap: fluid(30, 60);
+   
     box-sizing: content-box;
-    max-width: rem(465);
+    
+    padding-block: fluid(40, 80);
 
-    padding-block: rem(80);
-    padding-inline: var(--paddingInline);
-    margin-left: var(--reviewMarginLeft);
+    @include tablet-s {
+        max-width: rem(465);
+        margin-inline: auto;
+    }
+
+    &__body {
+        position: relative;
+        background-color: var(--color-secondary-background);
+    }
+    
+    &__rating {
+        position: absolute;
+        left: 50%;
+        translate: -50% -50%;
+        top: 0;   
+    }
+
+    &__feedback {
+        padding: fluid(30, 50) fluid(20, 30) fluid(20, 30);
+        border: var(--primary-border);
+        border-radius: var(--border-radius-primary);
+    }
 }

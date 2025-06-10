@@ -34,8 +34,8 @@
         var(--color-brand) 136%
       );
 
-    --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(16)};
+    --container-width: #{rem($CONTAINER_MAX_WIDTH)};
+    --container-padding-x: #{rem($CONTAINER_PADDING_X)};
 
     --transition-duration: 0.2s;
 }

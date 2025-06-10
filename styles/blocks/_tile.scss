@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     &__description {
         color: var(--color-secondary-foreground);
         font-size: fluid(14, 18);
@@ -20,9 +20,32 @@
         display: flex;
         flex-direction: column;
         row-gap: fluid(4, 20);
-        
+
         &_small-gap {
             row-gap: fluid(2, 4);
+        }
+    }
+
+    &__title {
+        &--has-icon {
+            display: flex;
+            justify-content: space-between;
+            &::after {
+                content: '';
+                background-image: url('../../icons/hero/features-icon.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: fluid(40, 52);
+                height: auto;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+    &--no-actions {
+        .tile__info {
+            width: 100%;
         }
     }
 }

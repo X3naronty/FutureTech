@@ -30,7 +30,13 @@
             align-items: center;
             gap: rem(30);
             @include tablet-s {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+
+            @include mobile {
+                align-items: stretch;
             }
         }
 
@@ -38,4 +44,6 @@
             flex-shrink: 0;
         }
     }
+    
+   
 }

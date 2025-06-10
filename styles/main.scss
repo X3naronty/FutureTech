@@ -7,11 +7,11 @@
 @use 'blocks';
 
 
-// .header, .footer {
-//     display: none !important;
-// }
+.header, .footer {
+    display: none !important;
+}
 
-// .main > :not(:last-child) {
-//     display: none !important;
-// }
+.main > :not(:last-child) {
+    display: none !important;
+}
 

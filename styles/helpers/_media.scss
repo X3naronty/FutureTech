@@ -1,4 +1,5 @@
 @use 'functions' as *;
+@use 'constants' as *;
 
 $laptop-above: 1441;
 $laptop: 1440.98;
@@ -93,4 +94,10 @@ $mobile: 390.98;
   @media print {
     @content;
   }
+}
+
+@mixin container {
+    @media (max-width: #{rem($CONTAINER_MAX_WIDTH + $CONTAINER-PADDING-X * 2)}) {
+        @content;
+    }
 }

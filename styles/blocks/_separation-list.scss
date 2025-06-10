@@ -3,35 +3,87 @@
 .separation-list {
     display: grid;
 
-    grid-template-columns: 1fr;
-
     &_grid-1-col {
+        grid-template-columns: 1fr;
         & .separation-list__item:not(:last-child) {
             border-bottom: var(--primary-border);
         }
     }
 
     &_grid-3-cols {
-        grid-template-columns: 1fr auto 1fr;
+        --paddingX: #{rem(50)};
+        grid-template-columns: auto auto auto;
 
-        --reviewMarginLeft: 0;
-        --paddingInline: #{rem(50)};
-
-        & .separation-list__item:not(:nth-child(3n)) {
-            border-right: var(--primary-border);
+        @include laptop {
+            --paddingX: #{rem(40)};
         }
 
-        & .separation-list__item:not(:nth-last-child(-n + 3)) {
-            border-bottom: var(--primary-border);
-        }
-        
-        & .separation-list__item:nth-child(3n+1) {
-            --reviewMarginLeft: auto;
-            --paddingInline: var(--container-padding-x) #{rem(50)};
+        @include laptop-s {
+            grid-template-columns: auto auto;
         }
 
-        & .separation-list__item:nth-child(3n) {
-            --paddingInline: #{rem(50)} var(--container-padding-x);
+        @include tablet-s {
+            grid-template-columns: auto;
+        }
+
+        .separation-list__item {
+            position: relative;
+
+            @include laptop-s-above {
+                &:nth-child(3n-2),
+                &:nth-child(3n-1) {
+                    padding-right: var(--paddingX);
+                    border-right: var(--primary-border);
+                }
+
+                &:nth-child(3n),
+                &:nth-child(3n-1) {
+                    padding-left: var(--paddingX);
+               }
+
+                &:nth-child(3n + 1):not(:nth-last-child(3))::before {
+                    content: '';
+                    position: absolute;
+                    border-bottom: var(--primary-border);
+                    bottom: 0;
+                    width: 100vw;
+                    left: calc(-1 * (100vw - var(--container-width)) / 2);
+                    @include container {
+                        left: calc(-1 * var(--container-padding-x));
+                    }
+                }
+            }
+
+            @include laptop-s {
+                @include tablet-s-above {
+                    &:nth-child(2n + 1):not(:nth-last-child(2))::before {
+                        content: '';
+                        position: absolute;
+                        border-bottom: var(--primary-border);
+                        bottom: 0;
+                        width: 100vw;
+                        left: calc(-1 * (100vw - var(--container-width)) / 2);
+                        @include container {
+                            left: calc(-1 * var(--container-padding-x));
+                        }
+                    }
+
+                    &:nth-child(2n + 1) {
+                        padding-right: var(--paddingX);
+                        border-right: var(--primary-border);
+                    }
+
+                    &:nth-child(2n) {
+                        padding-left: var(--paddingX);
+                   }
+                }
+            }
+
+            @include tablet-s {
+                &:not(:last-child) {
+                    border-bottom: var(--primary-border);
+                }
+            }
         }
     }
 }
