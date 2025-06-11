@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FutureTech | Contacts</title>
+        <link rel="stylesheet" href="styles/main.css" />
+        <script type="module" src="./scripts/main.js"></script>
+    </head>
+    <body>
+        <header class="header" data-js-header>
+            <div class="header__promo">
+                <div class="header__promo-inner container">
+                    <a href="" class="header__promo-link">
+                        <span class="header__promo-description text-with-icon top-right-yellow-arrow">
+                            Subscribe to our Newsletter For New & latest Blogs and Resources
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="header__body">
+                <div class="header__body-inner container">
+                    <a class="header__home-link" href="/" title="Go to home page">
+                        <svg
+                            width="179"
+                            height="50"
+                            class="header__home-icon"
+                            viewBox="0 0 179 51"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M164.629 16.8636H167.699V21.5746L167.511 23.6605H167.699C168.027 23.1136 168.496 22.6683 169.105 22.3246C169.73 21.9652 170.425 21.7855 171.191 21.7855C172.675 21.7855 173.769 22.223 174.472 23.098C175.191 23.973 175.55 25.1683 175.55 26.684V33.6449H172.48V27.059C172.48 26.2621 172.293 25.6605 171.918 25.2543C171.543 24.8324 171.019 24.6215 170.347 24.6215C169.925 24.6215 169.55 24.7152 169.222 24.9027C168.894 25.0746 168.613 25.3168 168.379 25.6293C168.16 25.9418 167.988 26.309 167.863 26.7308C167.754 27.1371 167.699 27.5746 167.699 28.0433V33.6449H164.629V16.8636Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M163.459 30.7152C162.959 31.684 162.255 32.4808 161.349 33.1058C160.459 33.7152 159.341 34.0199 157.998 34.0199C157.107 34.0199 156.287 33.8715 155.537 33.5746C154.802 33.2621 154.162 32.8324 153.615 32.2855C153.083 31.7386 152.662 31.098 152.349 30.3636C152.052 29.6136 151.904 28.7933 151.904 27.9027C151.904 27.0121 152.052 26.1918 152.349 25.4418C152.662 24.6918 153.083 24.0511 153.615 23.5199C154.162 22.973 154.802 22.5511 155.537 22.2543C156.287 21.9418 157.107 21.7855 157.998 21.7855C159.326 21.7855 160.443 22.0902 161.349 22.6996C162.255 23.309 162.919 24.098 163.341 25.0668L160.529 26.2386C160.263 25.7074 159.919 25.309 159.498 25.0433C159.091 24.7621 158.576 24.6215 157.951 24.6215C157.544 24.6215 157.162 24.6996 156.802 24.8558C156.443 25.0121 156.123 25.2308 155.841 25.5121C155.576 25.7933 155.365 26.1371 155.208 26.5433C155.052 26.9496 154.974 27.4027 154.974 27.9027C154.974 28.4027 155.052 28.8558 155.208 29.2621C155.365 29.6683 155.576 30.0121 155.841 30.2933C156.123 30.5746 156.443 30.7933 156.802 30.9496C157.162 31.1058 157.544 31.184 157.951 31.184C158.591 31.184 159.13 31.0433 159.568 30.7621C160.021 30.4652 160.38 30.0433 160.646 29.4965L163.459 30.7152Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M151 30.8793C150.469 31.8168 149.75 32.5746 148.844 33.1527C147.953 33.7308 146.86 34.0199 145.563 34.0199C144.688 34.0199 143.875 33.8715 143.125 33.5746C142.391 33.2621 141.75 32.8324 141.203 32.2855C140.657 31.7386 140.227 31.098 139.914 30.3636C139.618 29.6136 139.469 28.7933 139.469 27.9027C139.469 27.0746 139.618 26.2933 139.914 25.559C140.211 24.809 140.625 24.1605 141.157 23.6136C141.688 23.0511 142.313 22.6058 143.032 22.2777C143.766 21.9496 144.571 21.7855 145.446 21.7855C146.368 21.7855 147.188 21.9418 147.907 22.2543C148.625 22.5511 149.227 22.973 149.711 23.5199C150.196 24.0511 150.563 24.684 150.813 25.4183C151.063 26.1527 151.188 26.9496 151.188 27.809C151.188 27.9183 151.188 28.0121 151.188 28.0902C151.172 28.184 151.164 28.2699 151.164 28.348C151.149 28.4261 151.141 28.5121 151.141 28.6058H142.493C142.555 29.0746 142.68 29.4808 142.868 29.8246C143.071 30.1527 143.313 30.434 143.594 30.6683C143.891 30.8871 144.211 31.0511 144.555 31.1605C144.899 31.2543 145.25 31.3011 145.61 31.3011C146.313 31.3011 146.891 31.1449 147.344 30.8324C147.813 30.5043 148.18 30.098 148.446 29.6136L151 30.8793ZM148.211 26.4261C148.196 26.223 148.125 25.9965 148 25.7465C147.891 25.4965 147.719 25.2621 147.485 25.0433C147.266 24.8246 146.985 24.6449 146.641 24.5043C146.313 24.3636 145.914 24.2933 145.446 24.2933C144.789 24.2933 144.211 24.4808 143.711 24.8558C143.211 25.2308 142.86 25.7543 142.657 26.4261H148.211Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M132.979 33.6449V19.8636H128.291V16.8636H140.83V19.8636H136.143V33.6449H132.979Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M127.596 30.8793C127.065 31.8168 126.346 32.5746 125.44 33.1527C124.549 33.7308 123.455 34.0199 122.158 34.0199C121.283 34.0199 120.471 33.8715 119.721 33.5746C118.986 33.2621 118.346 32.8324 117.799 32.2855C117.252 31.7386 116.822 31.098 116.51 30.3636C116.213 29.6136 116.065 28.7933 116.065 27.9027C116.065 27.0746 116.213 26.2933 116.51 25.559C116.807 24.809 117.221 24.1605 117.752 23.6136C118.283 23.0511 118.908 22.6058 119.627 22.2777C120.361 21.9496 121.166 21.7855 122.041 21.7855C122.963 21.7855 123.783 21.9418 124.502 22.2543C125.221 22.5511 125.822 22.973 126.307 23.5199C126.791 24.0511 127.158 24.684 127.408 25.4183C127.658 26.1527 127.783 26.9496 127.783 27.809C127.783 27.9183 127.783 28.0121 127.783 28.0902C127.768 28.184 127.76 28.2699 127.76 28.348C127.744 28.4261 127.736 28.5121 127.736 28.6058H119.088C119.151 29.0746 119.276 29.4808 119.463 29.8246C119.666 30.1527 119.908 30.434 120.19 30.6683C120.486 30.8871 120.807 31.0511 121.151 31.1605C121.494 31.2543 121.846 31.3011 122.205 31.3011C122.908 31.3011 123.486 31.1449 123.94 30.8324C124.408 30.5043 124.776 30.098 125.041 29.6136L127.596 30.8793ZM124.807 26.4261C124.791 26.223 124.721 25.9965 124.596 25.7465C124.486 25.4965 124.315 25.2621 124.08 25.0433C123.861 24.8246 123.58 24.6449 123.236 24.5043C122.908 24.3636 122.51 24.2933 122.041 24.2933C121.385 24.2933 120.807 24.4808 120.307 24.8558C119.807 25.2308 119.455 25.7543 119.252 26.4261H124.807Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M108.589 22.1605H111.472V23.7543H111.66C111.8 23.473 111.988 23.2152 112.222 22.9808C112.456 22.7465 112.714 22.5433 112.995 22.3715C113.292 22.1996 113.605 22.0668 113.933 21.973C114.277 21.8793 114.613 21.8324 114.941 21.8324C115.347 21.8324 115.691 21.8715 115.972 21.9496C116.269 22.0277 116.519 22.1293 116.722 22.2543L115.902 25.0433C115.714 24.9496 115.503 24.8793 115.269 24.8324C115.05 24.7699 114.777 24.7386 114.449 24.7386C114.027 24.7386 113.644 24.8246 113.3 24.9965C112.956 25.1527 112.66 25.3793 112.41 25.6761C112.175 25.973 111.988 26.3246 111.847 26.7308C111.722 27.1215 111.66 27.5511 111.66 28.0199V33.6449H108.589V22.1605Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M103.779 32.1449H103.592C103.232 32.723 102.748 33.184 102.139 33.5277C101.529 33.8558 100.834 34.0199 100.053 34.0199C98.5996 34.0199 97.5137 33.5746 96.7949 32.684C96.0918 31.7933 95.7402 30.6058 95.7402 29.1215V22.1605H98.8105V28.7465C98.8105 29.5746 98.9902 30.1918 99.3496 30.598C99.7246 30.9886 100.264 31.184 100.967 31.184C101.389 31.184 101.756 31.098 102.068 30.9261C102.396 30.7386 102.67 30.4965 102.889 30.1996C103.123 29.8871 103.295 29.5277 103.404 29.1215C103.529 28.6996 103.592 28.2543 103.592 27.7855V22.1605H106.662V33.6449H103.779V32.1449Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M88.3958 24.7855H86.3801V22.1605H88.3958V18.6449H91.4661V22.1605H94.2786V24.7855H91.4661V29.2387C91.4661 29.5043 91.4895 29.7543 91.5364 29.9886C91.5989 30.2074 91.7083 30.3949 91.8645 30.5512C92.0833 30.8012 92.3958 30.9262 92.802 30.9262C93.0676 30.9262 93.2786 30.9027 93.4348 30.8558C93.5911 30.7933 93.7395 30.7152 93.8801 30.6215L94.7473 33.3168C94.3879 33.4887 93.9973 33.6137 93.5754 33.6918C93.1692 33.7855 92.7161 33.8324 92.2161 33.8324C91.6379 33.8324 91.1145 33.7465 90.6458 33.5746C90.1926 33.3871 89.8098 33.1371 89.4973 32.8246C88.7629 32.1215 88.3958 31.1215 88.3958 29.8246V24.7855Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M82.2058 32.1449H82.0183C81.6589 32.723 81.1746 33.184 80.5652 33.5277C79.9558 33.8558 79.2605 34.0199 78.4792 34.0199C77.0261 34.0199 75.9402 33.5746 75.2214 32.684C74.5183 31.7933 74.1667 30.6058 74.1667 29.1215V22.1605H77.2371V28.7465C77.2371 29.5746 77.4167 30.1918 77.7761 30.598C78.1511 30.9886 78.6902 31.184 79.3933 31.184C79.8152 31.184 80.1824 31.098 80.4949 30.9261C80.823 30.7386 81.0964 30.4965 81.3152 30.1996C81.5496 29.8871 81.7214 29.5277 81.8308 29.1215C81.9558 28.6996 82.0183 28.2543 82.0183 27.7855V22.1605H85.0886V33.6449H82.2058V32.1449Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M62.7273 16.8636H73.3679V19.8636H65.8914V23.9418H72.6179V26.9418H65.8914V33.6449H62.7273V16.8636Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M33.3333 50.5V42.1666C37.9444 42.1666 41.6666 38.4444 41.6666 33.8333H49.9999C49.9999 43.0555 42.5277 50.5 33.3333 50.5Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M33.3333 50.5V42.1666C28.7222 42.1666 25 38.4444 25 33.8333H16.6666C16.6666 43.0555 24.1388 50.5 33.3333 50.5Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M0 33.8334H8.33333C8.33333 38.4445 12.0556 42.1667 16.6667 42.1667V50.5C7.47222 50.5 0 43.0556 0 33.8334Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M0 33.8334H8.33333C8.33333 29.2222 12.0556 25.5 16.6667 25.5V17.1667C7.47222 17.1667 0 24.6389 0 33.8334Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M16.6667 0.5V8.83333C12.0556 8.83333 8.33333 12.5556 8.33333 17.1667H0C0 7.97222 7.47222 0.5 16.6667 0.5Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M16.6666 0.5V8.83333C21.2777 8.83333 25 12.5556 25 17.1667H33.3333C33.3333 7.97222 25.8611 0.5 16.6666 0.5Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M50 17.1667H41.6667C41.6667 12.5556 37.9445 8.83333 33.3334 8.83333V0.5C42.5278 0.5 50 7.97222 50 17.1667Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M50 17.1667H41.6667C41.6667 21.7778 37.9445 25.5 33.3334 25.5V33.8334C42.5278 33.8334 50 26.3889 50 17.1667Z"
+                                fill="#FFD11A"
+                            />
+                        </svg>
+                    </a>
+                    <button
+                        class="header__burger-button burger-button tablet-s-visible"
+                        title="Toggle navigation menu"
+                        aria-expanded="false"
+                        data-js-burger-button
+                    >
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                    </button>
+                    <div class="header__overlay" data-js-overlay>
+                        <nav class="header__nav">
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item">
+                                    <a href="/" class="header__nav-link">Home</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="/" class="header__nav-link">News</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="/" class="header__nav-link">Podcasts</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="/" class="header__nav-link">Resources</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="/" class="header__contact-us-link button button_accent">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <h1 class="visually-hidden">Contact with us</h1>
+            <!-- Contacts -->
+            <section class="section">
+                <div class="contacts container">
+                    <ul class="contacts__list separation-list separation-list_grid-4-cols">
+                        <li class="separation-list__item">
+                            <article class="contacts-card">
+                                <h3 class="contacts-card__title h6">General Inquiries</h3>
+                                <address class="contacts-card__body">
+                                    <ul class="contacts-card__list">
+                                        <li class="contacts-card__item">
+                                            <a
+                                                href="mailto:contact@ai-podcasts.com"
+                                                class="contacts-card__link button button_light-bg"
+                                            >
+                                                <span class="text-with-icon top-right-yellow-arrow">
+                                                    contact@ai-podcasts.com
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="contacts-card__item">
+                                            <a
+                                                href="tel:+11234567890"
+                                                class="contacts-card__link button button_light-bg"
+                                            >
+                                                <span class="text-with-icon top-right-yellow-arrow">
+                                                    +1 (123) 456-7890
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </article>
+                        </li>
+                        <li class="separation-list__item">
+                            <article class="contacts-card">
+                                <h3 class="contacts-card__title h6">Technical Support</h3>
+                                <address class="contacts-card__body">
+                                    <ul class="contacts-card__list">
+                                        <li class="contacts-card__item">
+                                            <a
+                                                href="mailto:contact@ai-podcasts.com"
+                                                class="contacts-card__link button button_light-bg"
+                                            >
+                                                <span class="text-with-icon top-right-yellow-arrow">
+                                                    contact@ai-podcasts.com
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="contacts-card__item">
+                                            <a
+                                                href="tel:+11234567890"
+                                                class="contacts-card__link button button_light-bg"
+                                            >
+                                                <span class="text-with-icon top-right-yellow-arrow">
+                                                    +1 (123) 456-7890
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </article>
+                        </li>
+                        <li class="separation-list__item">
+                            <article class="contacts-card">
+                                <h3 class="contacts-card__title h6">Our Office</h3>
+                                <address class="contacts-card__body">
+                                    <ul class="contacts-card__list">
+                                        <li class="contacts-card__item">
+                                            <div class="contacts-card__descripiton">
+                                                <p>Address: 123 AI Tech Avenue, Techville, 54321</p>
+                                            </div>
+                                        </li>
+                                        <li class="contacts-card__item">
+                                            <a href="/" class="contacts-card__link button button_light-bg">
+                                                <span class="text-with-icon top-right-yellow-arrow">
+                                                    Get Directions
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </address>
+                            </article>
+                        </li>
+                        <li class="separation-list__item">
+                            <article class="contacts-card">
+                                <h3 class="contacts-card__title h6">Connect with Us</h3>
+                                <div class="contacts-card__body">
+                                    <div class="footer__soc1als soc1als">
+                                        <ul class="soc1als__list">
+                                            <li class="soc1als__item">
+                                                <a href="/" class="soc1als__link soc1als__link_huge">
+                                                    <svg
+                                                        class="soc1als__icon icon-with-hover"
+                                                        width="24"
+                                                        height="20"
+                                                        viewBox="0 0 24 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M21.0571 5.18114C21.0664 5.39235 21.0664 5.59395 21.0664 5.80515C21.0756 12.2084 16.3712 19.6004 7.76793 19.6004C5.23048 19.6004 2.73933 18.842 0.600098 17.4212C0.970528 17.4692 1.34096 17.4884 1.71139 17.4884C3.81358 17.4884 5.86021 16.7588 7.51789 15.4052C5.51756 15.3668 3.75802 14.0132 3.14681 12.0356C3.85063 12.1796 4.57297 12.1508 5.25826 11.9492C3.08198 11.5076 1.51691 9.52036 1.50765 7.20675C1.50765 7.18755 1.50765 7.16835 1.50765 7.14915C2.15591 7.52355 2.88751 7.73475 3.62837 7.75395C1.58174 6.33315 0.942746 3.50114 2.18369 1.28353C4.5637 4.31714 8.06427 6.15075 11.8241 6.35235C11.4445 4.67234 11.9631 2.90594 13.1762 1.71553C15.0561 -0.118073 18.0196 -0.0220722 19.7977 1.92673C20.8441 1.71553 21.8535 1.31233 22.7704 0.74593C22.4185 1.86913 21.6869 2.81954 20.7145 3.42434C21.6406 3.30914 22.5481 3.04994 23.4001 2.66594C22.7704 3.64514 21.9739 4.48994 21.0571 5.18114Z"
+                                                            fill="white"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="soc1als__item">
+                                                <a href="/" class="soc1als__link soc1als__link_huge">
+                                                    <svg
+                                                        class="soc1als__icon icon-with-hover"
+                                                        width="24"
+                                                        height="15"
+                                                        viewBox="0 0 24 15"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M13.5374 7.22809C13.5374 10.9988 10.5069 14.0556 6.76883 14.0556C3.03073 14.0556 0 10.9981 0 7.22809C0 3.45806 3.0305 0.400391 6.76883 0.400391C10.5072 0.400391 13.5374 3.45737 13.5374 7.22809Z"
+                                                            fill="white"
+                                                        />
+                                                        <path
+                                                            d="M20.9627 7.22853C20.9627 10.7778 19.4474 13.6563 17.5783 13.6563C15.7091 13.6563 14.1938 10.7778 14.1938 7.22853C14.1938 3.67922 15.7089 0.800781 17.578 0.800781C19.4472 0.800781 20.9625 3.67829 20.9625 7.22853"
+                                                            fill="white"
+                                                        />
+                                                        <path
+                                                            d="M24 7.22798C24 10.4073 23.4672 12.9862 22.8097 12.9862C22.1522 12.9862 21.6196 10.408 21.6196 7.22798C21.6196 4.04797 22.1525 1.46973 22.8097 1.46973C23.467 1.46973 24 4.04774 24 7.22798Z"
+                                                            fill="white"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="soc1als__item">
+                                                <a href="/" class="soc1als__link soc1als__link_huge">
+                                                    <svg
+                                                        class="soc1als__icon icon-with-hover"
+                                                        width="22"
+                                                        height="22"
+                                                        viewBox="0 0 22 22"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M19.8647 0.599609H2.13554C1.72832 0.599609 1.33777 0.761379 1.04982 1.04933C0.761867 1.33728 0.600098 1.72783 0.600098 2.13505V19.8642C0.600098 20.2714 0.761867 20.6619 1.04982 20.9499C1.33777 21.2378 1.72832 21.3996 2.13554 21.3996H19.8647C20.2719 21.3996 20.6624 21.2378 20.9504 20.9499C21.2383 20.6619 21.4001 20.2714 21.4001 19.8642V2.13505C21.4001 1.72783 21.2383 1.33728 20.9504 1.04933C20.6624 0.761379 20.2719 0.599609 19.8647 0.599609ZM6.79965 18.3186H3.67243V8.38516H6.79965V18.3186ZM5.23388 7.00861C4.87915 7.00661 4.53296 6.89958 4.239 6.70102C3.94504 6.50246 3.71649 6.22127 3.58219 5.89294C3.44789 5.56461 3.41386 5.20386 3.48439 4.8562C3.55492 4.50855 3.72686 4.18958 3.9785 3.93955C4.23014 3.68952 4.5502 3.51964 4.8983 3.45134C5.2464 3.38304 5.60693 3.41939 5.93439 3.5558C6.26185 3.6922 6.54156 3.92255 6.73823 4.21778C6.9349 4.51301 7.03971 4.85988 7.03943 5.21461C7.04278 5.45211 6.99827 5.68784 6.90857 5.90777C6.81887 6.1277 6.68582 6.32732 6.51733 6.49473C6.34884 6.66215 6.14837 6.79392 5.92787 6.88221C5.70736 6.97049 5.47134 7.01348 5.23388 7.00861ZM18.3263 18.3273H15.2005V12.9005C15.2005 11.3001 14.5202 10.8061 13.642 10.8061C12.7147 10.8061 11.8047 11.5052 11.8047 12.9409V18.3273H8.67743V8.39239H11.6848V9.76894H11.7252C12.0271 9.15794 13.0844 8.11361 14.6979 8.11361C16.4428 8.11361 18.3278 9.14928 18.3278 12.1826L18.3263 18.3273Z"
+                                                            fill="white"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="separation-list separation-list_grid-1-col separation-list_top-border">
+                <div class="separation-list__item">
+                    <section class="section" aria-describedby="section-get-in-tough-title">
+                        <div class="content-card container">
+                            <header class="content-card__header">
+                                <div class="content-card__header-main">
+                                    <svg
+                                        class="content-card__icon"
+                                        width="80"
+                                        height="80"
+                                        viewBox="0 0 80 80"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M40 24C40 32.8366 32.8366 40 24 40C15.1634 40 8 32.8366 8 24C8 15.1634 15.1634 8 24 8C32.8366 8 40 15.1634 40 24Z"
+                                            fill="#404040"
+                                        />
+                                        <path
+                                            d="M72 24C72 32.8366 64.8366 40 56 40C47.1634 40 40 32.8366 40 24C40 15.1634 47.1634 8 56 8C64.8366 8 72 15.1634 72 24Z"
+                                            fill="#FFD11A"
+                                        />
+                                        <path
+                                            d="M72 56C72 64.8366 64.8366 72 56 72C47.1634 72 40 64.8366 40 56C40 47.1634 47.1634 40 56 40C64.8366 40 72 47.1634 72 56Z"
+                                            fill="#404040"
+                                        />
+                                        <path
+                                            d="M40 56C40 64.8366 32.8366 72 24 72C15.1634 72 8 64.8366 8 56C8 47.1634 15.1634 40 24 40C32.8366 40 40 47.1634 40 56Z"
+                                            fill="#FFD11A"
+                                        />
+                                    </svg>
+                                    <div class="content-card__header-info">
+                                        <h2 class="content-card__header-title" id="section-get-in-touch-title">
+                                            Get in Touch with AI Podcasts
+                                        </h2>
+                                    </div>
+                                </div>
+                            </header>
+                            <form class="content-card__body podcasts-form" method="post">
+                                <div class="content-card__area">
+                                    <div class="podcasts-form__fragment">
+                                        <label for="firstNameInput" class="podcasts-form__label">
+                                            First Name
+                                            <span class="podcasts-form__marker">*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="firstNameInput"
+                                            placeholder="Ivan"
+                                            class="podcasts-form__field field"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="content-card__area">
+                                    <div class="podcasts-form__fragment">
+                                        <label for="lastNameInput" class="podcasts-form__label">Last Name</label>
+                                        <input
+                                            type="text"
+                                            id="lastNameInput"
+                                            placeholder="Ivanov"
+                                            class="podcasts-form__field field"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="content-card__area">
+                                    <div class="podcasts-form__fragment">
+                                        <label for="emailInput" class="podcasts-form__label">
+                                            Email
+                                            <span class="podcasts-form__marker">*</span>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="emailInput"
+                                            placeholder="ivanivanov@gmial.com"
+                                            class="podcasts-form__field field"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="content-card__area">
+                                    <div class="podcasts-form__fragment">
+                                        <label for="telInput" class="podcasts-form__label">
+                                            Phone Number
+                                            <span class="podcasts-form__marker">*</span>
+                                        </label>
+                                        <div class="podcasts-form__tel-input">
+                                            <select name="" id="telPrefixInput" class="field">
+                                                <option value="+375" selected>Bel</option>
+                                            </select>
+                                            <input
+                                                type="tel"
+                                                id="telInput"
+                                                placeholder="999-99-99"
+                                                class="podcasts-form__field field"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-card__area content-card__area_wide">
+                                    <div class="podcasts-form__fragment">
+                                        <label for="messageInput" class="podcasts-form__label">Message</label>
+                                        <textarea
+                                            name=""
+                                            id="messageInput"
+                                            rows="8"
+                                            placeholder="You're doing good"
+                                            class="field"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class="content-card__area content-card__area_wide">
+                                    <div class="podcasts-form__actions">
+                                        <label for="policyCheckbox" class="podcasts-form__checkbox checkbox">
+                                            <input type="checkbox" id="policyCheckbox" class="checkbox__input" />
+                                            <span class="checkbox__label">
+                                                I agree with Terms of Use and Privacy Policy
+                                            </span>
+                                        </label>
+                                        <button type="submit" class="podcasts-form__submit button button_accent">
+                                            Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+                <div class="separation-list__item">
+                    <section class="section" aria-describedby="section-questions-title">
+                        <div class="content-card container">
+                            <header class="content-card__header">
+                                <div class="content-card__header-main">
+                                    <svg
+                                        class="content-card__header-icon"
+                                        width="64"
+                                        height="64"
+                                        viewBox="0 0 64 64"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0 21.9995C0 30.8739 5.2545 38.5211 12.8221 41.9995H0C0 54.1498 9.84974 63.9995 22 63.9995C30.8744 63.9995 38.5216 58.745 42 51.1775V63.9995C54.1503 63.9995 64 54.1498 64 41.9995C64 33.1251 58.7455 25.478 51.1779 21.9995H64C64 9.84925 54.1503 -0.000488281 42 -0.000488281C33.1256 -0.000488281 25.4784 5.25402 22 12.8216V-0.000488281C9.84974 -0.000488281 0 9.84925 0 21.9995Z"
+                                            fill="#404040"
+                                        />
+                                        <path
+                                            d="M42 31.9996C42 37.5225 37.5228 41.9996 32 41.9996C26.4772 41.9996 22 37.5225 22 31.9996C22 26.4768 26.4772 21.9996 32 21.9996C37.5228 21.9996 42 26.4768 42 31.9996Z"
+                                            fill="#FFD11A"
+                                        />
+                                    </svg>
+                                    <div class="content-card__header-info">
+                                        <h2 class="content-card__header__title h3" id="section-questions-title">
+                                            Asked question
+                                        </h2>
+                                        <div class="content-card__header-description">
+                                            If the question is not available on our FAQ section, Feel free to contact us
+                                            personally, we will resolve your respective doubts.
+                                        </div>
+                                    </div>
+                                    <a href="/" class="content-card__link button button_light-bg">
+                                        <span class="text-with-icon top-right-yellow-arrow">Ask Qustion</span>
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="content-card__body content-card__body_1-col">
+                                <div class="content-card__area">
+                                    <details class="accordion" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h3 class="accordion__title h6">What is AI?</h3>
+                                        </summary>
+                                        <div class="accordion__details">
+                                            <div class="accordion__inner">
+                                                <div class="accordion__description">
+                                                    <p>
+                                                        AI stands for Artificial Intelligence, which refers to the
+                                                        simulation of human intelligence in machines. It enables them to
+                                                        perform tasks like problem-solving, learning, and decision-making.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                    
+                                </div>
+                                <div class="content-card__area">
+                                    <details class="accordion" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h3 class="accordion__title h6">How can I listen to your podcasts?</h3>
+                                        </summary>
+                                        <div class="accordion__details">
+                                            <p>
+                                                AI stands for Artificial Intelligence, which refers to the simulation of
+                                                human intelligence in machines. It enables them to perform tasks like
+                                                problem-solving, learning, and decision-making.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="content-card__area">
+                                    <details class="accordion" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h3 class="accordion__title h6">Are your podcasts free to listen to?</h3>
+                                        </summary>
+                                        <div class="accordion__details">
+                                            <p>
+                                                AI stands for Artificial Intelligence, which refers to the simulation of
+                                                human intelligence in machines. It enables them to perform tasks like
+                                                problem-solving, learning, and decision-making.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="content-card__area">
+                                    <details class="accordion" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h3 class="accordion__title h6">
+                                                Can I download episodes to listen offline?
+                                            </h3>
+                                        </summary>
+                                        <div class="accordion__details">
+                                            <p>
+                                                AI stands for Artificial Intelligence, which refers to the simulation of
+                                                human intelligence in machines. It enables them to perform tasks like
+                                                problem-solving, learning, and decision-making.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+                                <div class="content-card__area">
+                                    <details class="accordion" name="faq">
+                                        <summary class="accordion__summary">
+                                            <h3 class="accordion__title h6">How often do you release new episodes?</h3>
+                                        </summary>
+                                        <div class="accordion__details">
+                                            <p>
+                                                AI stands for Artificial Intelligence, which refers to the simulation of
+                                                human intelligence in machines. It enables them to perform tasks like
+                                                problem-solving, learning, and decision-making.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Veiw more -->
+            <!-- <section class="section section__header">
+                <div class="view-more container">
+                    <header class="view-more__header">
+                        <svg
+                            class="view-more__header-icon"
+                            width="150"
+                            height="151"
+                            viewBox="0 0 150 151"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M99.999 150.5V125.5C113.832 125.5 124.999 114.334 124.999 100.5H149.998C149.998 128.167 127.582 150.5 99.999 150.5Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M99.9994 150.5V125.5C86.1662 125.5 74.9997 114.334 74.9997 100.5H50C50 128.167 72.4164 150.5 99.9994 150.5Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M0 100.498H24.9997C24.9997 114.331 36.1662 125.498 49.9994 125.498V150.497C22.4164 150.497 0 128.164 0 100.498Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M0 100.499H24.9997C24.9997 86.6662 36.1662 75.4997 49.9994 75.4997V50.5C22.4164 50.5 0 72.9164 0 100.499Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M49.9994 0.500488V25.5002C36.1662 25.5002 24.9997 36.6667 24.9997 50.4999H0C0 22.9169 22.4164 0.500488 49.9994 0.500488Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M50 0.500488V25.5002C63.8332 25.5002 74.9997 36.6667 74.9997 50.4999H99.9994C99.9994 22.9169 77.583 0.500488 50 0.500488Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M149.998 50.4999H124.999C124.999 36.6667 113.832 25.5002 99.999 25.5002V0.500488C127.582 0.500488 149.998 22.9169 149.998 50.4999Z"
+                                fill="#FFD11A"
+                            />
+                            <path
+                                d="M149.998 50.4995H124.999C124.999 64.3327 113.832 75.4992 99.999 75.4992V100.499C127.582 100.499 149.998 78.1659 149.998 50.4995Z"
+                                fill="#FFD11A"
+                            />
+                        </svg>
+                        <p class="view-more__header-subtitle">Learn, Connect, and Innovate</p>
+                        <div class="view-more__header-info">
+                            <h2 class="view-more__header-title">Be Part of the Future Tech Revolution</h2>
+                            <div class="view-more__header-description">
+                                <p>
+                                    Immerse yourself in the world of future technology. Explore our comprehensive
+                                    resources, connect with fellow tech enthusiasts, and drive innovation in the
+                                    industry. Join a dynamic community of forward-thinkers.
+                                </p>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="view-more__body">
+                        <ul class="view-more__list">
+                            <li class="view-more__item">
+                                <a href="/" class="view-more__card tile tile--no-actions ">
+                                    <hgroup class="tile__info">
+                                        <h3 class="tile__title h5 tile__title--has-icon">Resource Access</h3>
+                                        <p class="tile__description">
+                                            Visitors can access a wide range of resources, including ebooks,
+                                            whitepapers, reports.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </li>
+                            <li class="view-more__item">
+                                <a href="/" class="view-more__card tile tile--no-actions">
+                                    <hgroup class="tile__info">
+                                        <h3 class="tile__title h5 tile__title--has-icon">Resource Access</h3>
+                                        <p class="tile__description">
+                                            Visitors can access a wide range of resources, including ebooks,
+                                            whitepapers, reports.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </li>
+                            <li class="view-more__item">
+                                <a href="/" class="view-more__card tile tile--no-actions">
+                                    <hgroup class="tile__info">
+                                        <h3 class="tile__title h5 tile__title--has-icon">Resource Access</h3>
+                                        <p class="tile__description">
+                                            Visitors can access a wide range of resources, including ebooks,
+                                            whitepapers, reports.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+        <footer class="footer">
+            <div class="footer__inner container">
+                <nav class="footer__nav">
+                    <div class="footer__nav-column">
+                        <a href="" class="footer__nav-main-link h6">Home</a>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="#Features" class="footer__nav-link">Features</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Blogs" class="footer__nav-link">Blogs</a>
+                            </li>
+                            <li class="footer__nav-item has-badge">
+                                <a href="#Resources" class="footer__nav-link">Resources</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Testimonials" class="footer__nav-link">Testimonials</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#ContactUs" class="footer__nav-link">Contact Us</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Newsletter" class="footer__nav-link">Newsletter</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-column">
+                        <a href="" class="footer__nav-main-link h6">News</a>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="#TrendingStories" class="footer__nav-link">Trending Stories</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#FeaturedVideos" class="footer__nav-link">Featured Videos</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Technology" class="footer__nav-link">Technology</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Health" class="footer__nav-link">Health</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Politics" class="footer__nav-link">Politics</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Environment" class="footer__nav-link">Environment</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-column">
+                        <a href="" class="footer__nav-main-link h6">Blogs</a>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="#QuantumComputing" class="footer__nav-link">Quantum Computing</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#AIEthics" class="footer__nav-link">AI Ethics</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#SpaceExploration" class="footer__nav-link">Space Exploration</a>
+                            </li>
+                            <li class="footer__nav-item has-badge">
+                                <a href="#Biotechnology" class="footer__nav-link">Biotechnology</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#RenewablexEnergy" class="footer__nav-link">Renewable Energy</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#Biohacking" class="footer__nav-link">Biohacking</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-column">
+                        <a href="" class="footer__nav-main-link h6">Podcasts</a>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="#AIRevolution" class="footer__nav-link">AI Revolution</a>
+                            </li>
+                            <li class="footer__nav-item has-badge">
+                                <a href="#AIRevolution" class="footer__nav-link">AI Revolution</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#TechTalkAI" class="footer__nav-link">TechTalk AI</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#AIConversations" class="footer__nav-link">AI Conversations</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-column">
+                        <a href="" class="footer__nav-main-link h6">Resources</a>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="/" class="footer__nav-link button button_small-padding">
+                                    <span class="text-with-icon top-right-yellow-arrow">Whitepapers</span>
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="/" class="footer__nav-link button button_small-padding">
+                                    <span class="text-with-icon top-right-yellow-arrow">Ebooks</span>
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="/" class="footer__nav-link button button_small-padding">
+                                    <span class="text-with-icon top-right-yellow-arrow">Reports</span>
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="/" class="footer__nav-link button button_small-padding">
+                                    <span class="text-with-icon top-right-yellow-arrow">Research Papers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="footer__extra">
+                    <div class="footer__policy">
+                        <ul class="footer__policy-list">
+                            <li class="footer__policy-item">
+                                <a href="/" class="footer__policy-link">Terms & Conditions</a>
+                            </li>
+                            <li class="footer__policy-item">
+                                <a href="/" class="footer__policy-link">Privary Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__soc1als soc1als">
+                        <ul class="soc1als__list">
+                            <li class="soc1als__item">
+                                <a href="/" class="soc1als__link">
+                                    <svg
+                                        class="soc1als__icon icon-with-hover"
+                                        width="24"
+                                        height="20"
+                                        viewBox="0 0 24 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M21.0571 5.18114C21.0664 5.39235 21.0664 5.59395 21.0664 5.80515C21.0756 12.2084 16.3712 19.6004 7.76793 19.6004C5.23048 19.6004 2.73933 18.842 0.600098 17.4212C0.970528 17.4692 1.34096 17.4884 1.71139 17.4884C3.81358 17.4884 5.86021 16.7588 7.51789 15.4052C5.51756 15.3668 3.75802 14.0132 3.14681 12.0356C3.85063 12.1796 4.57297 12.1508 5.25826 11.9492C3.08198 11.5076 1.51691 9.52036 1.50765 7.20675C1.50765 7.18755 1.50765 7.16835 1.50765 7.14915C2.15591 7.52355 2.88751 7.73475 3.62837 7.75395C1.58174 6.33315 0.942746 3.50114 2.18369 1.28353C4.5637 4.31714 8.06427 6.15075 11.8241 6.35235C11.4445 4.67234 11.9631 2.90594 13.1762 1.71553C15.0561 -0.118073 18.0196 -0.0220722 19.7977 1.92673C20.8441 1.71553 21.8535 1.31233 22.7704 0.74593C22.4185 1.86913 21.6869 2.81954 20.7145 3.42434C21.6406 3.30914 22.5481 3.04994 23.4001 2.66594C22.7704 3.64514 21.9739 4.48994 21.0571 5.18114Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="soc1als__item">
+                                <a href="/" class="soc1als__link">
+                                    <svg
+                                        class="soc1als__icon icon-with-hover"
+                                        width="24"
+                                        height="15"
+                                        viewBox="0 0 24 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M13.5374 7.22809C13.5374 10.9988 10.5069 14.0556 6.76883 14.0556C3.03073 14.0556 0 10.9981 0 7.22809C0 3.45806 3.0305 0.400391 6.76883 0.400391C10.5072 0.400391 13.5374 3.45737 13.5374 7.22809Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            d="M20.9627 7.22853C20.9627 10.7778 19.4474 13.6563 17.5783 13.6563C15.7091 13.6563 14.1938 10.7778 14.1938 7.22853C14.1938 3.67922 15.7089 0.800781 17.578 0.800781C19.4472 0.800781 20.9625 3.67829 20.9625 7.22853"
+                                            fill="white"
+                                        />
+                                        <path
+                                            d="M24 7.22798C24 10.4073 23.4672 12.9862 22.8097 12.9862C22.1522 12.9862 21.6196 10.408 21.6196 7.22798C21.6196 4.04797 22.1525 1.46973 22.8097 1.46973C23.467 1.46973 24 4.04774 24 7.22798Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="soc1als__item">
+                                <a href="/" class="soc1als__link">
+                                    <svg
+                                        class="soc1als__icon icon-with-hover"
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 22 22"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M19.8647 0.599609H2.13554C1.72832 0.599609 1.33777 0.761379 1.04982 1.04933C0.761867 1.33728 0.600098 1.72783 0.600098 2.13505V19.8642C0.600098 20.2714 0.761867 20.6619 1.04982 20.9499C1.33777 21.2378 1.72832 21.3996 2.13554 21.3996H19.8647C20.2719 21.3996 20.6624 21.2378 20.9504 20.9499C21.2383 20.6619 21.4001 20.2714 21.4001 19.8642V2.13505C21.4001 1.72783 21.2383 1.33728 20.9504 1.04933C20.6624 0.761379 20.2719 0.599609 19.8647 0.599609ZM6.79965 18.3186H3.67243V8.38516H6.79965V18.3186ZM5.23388 7.00861C4.87915 7.00661 4.53296 6.89958 4.239 6.70102C3.94504 6.50246 3.71649 6.22127 3.58219 5.89294C3.44789 5.56461 3.41386 5.20386 3.48439 4.8562C3.55492 4.50855 3.72686 4.18958 3.9785 3.93955C4.23014 3.68952 4.5502 3.51964 4.8983 3.45134C5.2464 3.38304 5.60693 3.41939 5.93439 3.5558C6.26185 3.6922 6.54156 3.92255 6.73823 4.21778C6.9349 4.51301 7.03971 4.85988 7.03943 5.21461C7.04278 5.45211 6.99827 5.68784 6.90857 5.90777C6.81887 6.1277 6.68582 6.32732 6.51733 6.49473C6.34884 6.66215 6.14837 6.79392 5.92787 6.88221C5.70736 6.97049 5.47134 7.01348 5.23388 7.00861ZM18.3263 18.3273H15.2005V12.9005C15.2005 11.3001 14.5202 10.8061 13.642 10.8061C12.7147 10.8061 11.8047 11.5052 11.8047 12.9409V18.3273H8.67743V8.39239H11.6848V9.76894H11.7252C12.0271 9.15794 13.0844 8.11361 14.6979 8.11361C16.4428 8.11361 18.3278 9.14928 18.3278 12.1826L18.3263 18.3273Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__copyright">
+                        <p>© 2024 FutureTech. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

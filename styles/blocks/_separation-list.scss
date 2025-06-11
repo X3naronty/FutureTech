@@ -3,6 +3,10 @@
 .separation-list {
     display: grid;
 
+    &_top-border {
+        border-top: var(--primary-border);
+    }
+
     &_grid-1-col {
         grid-template-columns: 1fr;
         & .separation-list__item:not(:last-child) {
@@ -39,7 +43,7 @@
                 &:nth-child(3n),
                 &:nth-child(3n-1) {
                     padding-left: var(--paddingX);
-               }
+                }
 
                 &:nth-child(3n + 1):not(:nth-last-child(3))::before {
                     content: '';
@@ -75,7 +79,86 @@
 
                     &:nth-child(2n) {
                         padding-left: var(--paddingX);
-                   }
+                    }
+                }
+            }
+
+            @include tablet-s {
+                &:not(:last-child) {
+                    border-bottom: var(--primary-border);
+                }
+            }
+        }
+    }
+
+    &_grid-4-cols {
+        grid-template-columns: repeat(4, auto);
+        --paddingX: #{rem(50)};
+
+        @include laptop {
+            --paddingX: #{rem(25)};
+        }
+
+        @include laptop-s {
+            grid-template-columns: repeat(2, auto)
+        }
+
+        @include tablet-s {
+            grid-template-columns: 1fr;
+        }
+
+        .separation-list__item {
+            position: relative;
+
+            @include laptop-s-above {
+                &:nth-child(4n-3),
+                &:nth-child(4n-2),
+                &:nth-child(4n-1) {
+                    padding-right: var(--paddingX);
+                    border-right: var(--primary-border);
+                }
+
+                &:nth-child(4n),
+                &:nth-child(4n-1),
+                &:nth-child(4n-2) {
+                    padding-left: var(--paddingX);
+                }
+
+                &:nth-child(4n + 1):not(:nth-last-child(4))::before {
+                    content: '';
+                    position: absolute;
+                    border-bottom: var(--primary-border);
+                    bottom: 0;
+                    width: 100vw;
+                    left: calc(-1 * (100vw - var(--container-width)) / 2);
+                    @include container {
+                        left: calc(-1 * var(--container-padding-x));
+                    }
+                }
+            }
+
+            @include laptop-s {
+                @include tablet-s-above {
+                    &:nth-child(2n + 1):not(:nth-last-child(2))::before {
+                        content: '';
+                        position: absolute;
+                        border-bottom: var(--primary-border);
+                        bottom: 0;
+                        width: 100vw;
+                        left: calc(-1 * (100vw - var(--container-width)) / 2);
+                        @include container {
+                            left: calc(-1 * var(--container-padding-x));
+                        }
+                    }
+
+                    &:nth-child(2n + 1) {
+                        padding-right: var(--paddingX);
+                        border-right: var(--primary-border);
+                    }
+
+                    &:nth-child(2n) {
+                        padding-left: var(--paddingX);
+                    }
                 }
             }
 

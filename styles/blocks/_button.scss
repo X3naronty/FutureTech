@@ -16,15 +16,18 @@
     
     background-color: var(--color-primary-background);
     
+    min-width: rem(140);
+
+    @include hover {
+        background-color: var(--color-secondary-background);
+        border-color: var(--color-brand);
+        color: var(--color-brand);
+    }
+
     @include laptop {
         padding: rem(14) rem(20);
         font-size: rem(14);
         border-radius: var(--border-radius-secondary);
-    }
-
-    &:hover {
-        background-color: var(--color-secondary-background);
-        border-color: var(--color-brand);
     }
 
     &_light-bg {
@@ -36,10 +39,10 @@
         color: var(--color-primary-background);
         border-color: var(--color-brand);
 
-        padding: rem(14) rem(20);
+        padding: rem(18) rem(20);
 
         @include laptop {
-            padding: rem(10) rem(15);
+            padding: rem(14) rem(15);
         }
         @include hover {
             background-color: var(--color-secondary-background);

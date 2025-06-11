@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    --borderColor: var(--primary-border);
+
+    @include hover {
+        color: var(--color-brand);
+        --borderColor: var(--color-brand); 
+    }
+
+    &__input {
+        appearance: none;
+        width: rem(28);
+        height: rem(28);
+        border: rem(1) solid var(--borderColor);
+        border-radius: rem(4);
+        background-color: var(--color-secondary-background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:checked::after {
+            content: '✔';
+            font-size: rem(20);
+            color: var(--color-brand);
+        }
+    }
+}

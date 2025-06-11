@@ -1,0 +1,13 @@
+@use '../helpers/' as *;
+
+.field {
+    padding: fluid(16, 20);
+    background-color: var(--color-secondary-background);
+    border-radius: var(--border-radius-secondary);
+    border: var(--primary-border);
+    color: var(--color-primary-foreground);
+
+    &:hover {
+        border-color: var(--color-brand);
+    }
+}

@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+
+.soc1als {
+        
+    @include tablet-s {
+        order: -1;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: rem(10);
+
+        &:has( .soc1als__link_huge) {
+            column-gap: fluid(10, 20);
+        }
+    }
+
+    &__link {
+        min-height: 100%;
+        padding: rem(5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-primary-foreground);
+        
+        &_huge {
+            padding-block: fluid(14, 18);
+            padding-inline: rem(30);
+            background-color: var(--color-secondary-background);
+            border: var(--primary-border);
+            border-radius: rem(6);
+            @include laptop {
+                padding-inline: rem(24);
+            }
+
+            @include laptop-s {
+                width: rem(96);
+
+            }
+            
+            @include hover {
+                border-color: var(--color-brand);
+                background-color: var(--color-primary-background);
+            }
+        }
+    }
+
+    &__icon {
+        @include laptop {
+            width: rem(20);
+        }
+    }
+}

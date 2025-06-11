@@ -91,32 +91,7 @@
         }
     }
 
-    &__soc1als {
-        
-        @include tablet-s {
-            order: -1;
-        }
 
-        &-list {
-            display: flex;
-            column-gap: rem(10);
-        }
-
-        &-link {
-            min-height: 100%;
-            padding: rem(5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--color-primary-foreground);
-        }
-
-        &-icon {
-            @include laptop {
-                width: rem(20);
-            }
-        }
-    }
 
     &__policy {
         &-list {

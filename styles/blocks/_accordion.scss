@@ -1,0 +1,87 @@
+@use '../helpers' as *;
+
+.accordion {
+    --summaryBorder: none;
+    --summaryPadding: 0;
+    padding: fluid(24, 34);
+    background-color: var(--color-secondary-background);
+    border-radius: var(--border-radius-secondary);
+    transition-duration: 0.5s;
+
+    &[open] {
+        .accordion__summary {
+            &::after,
+            &::before {
+                border-color: var(--color-primary-foreground);
+            }
+
+            &::after {
+                rotate: 0deg;
+            }
+        }
+        
+        & .accordion__details {
+            grid-template-rows: 1fr;
+        }
+    }
+
+    @keyframes grid {
+        from {
+            grid-template-columns: 0fr;
+        } 
+        to {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__details {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition-duration: 0.4s;
+
+       
+    }
+    &__inner {
+        overflow: hidden;
+    }
+    &__summary {
+        user-select: none;
+        color: var(--color-primary-foreground);
+        position: relative;
+        list-style: none;
+
+        @include hover {
+            color: var(--color-brand);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: rem(16);
+            height: rem(2);
+            border-top: rem(3) solid var(--color-brand);
+            right: 0;
+            position: absolute;
+            border-radius: rem(3);
+            top: 50%;
+            translate: -50%;
+        }
+
+        &::after {
+            rotate: 90deg;
+            transition-duration: 0.3s;
+        }
+    }
+
+    &__title {
+        color: inherit;
+    }
+
+    &__details {
+        // margin-top: fluid(15, 24);
+        // border-top: var(--primary-border);
+        // padding-top: fluid(16, 24);
+        // transition-duration: 0.5s;
+    }
+}
