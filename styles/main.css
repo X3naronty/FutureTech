@@ -691,7 +691,7 @@ img {
   background-image: url("../icons/top-right-arrow.svg");
 }
 .text-with-icon.yellow-eye::after {
-  background-image: url("../../icons/yellow-eye.svg");
+  background-image: url("../icons/yellow-eye.svg");
 }
 
 .icon-with-hover :where([fill]) {
@@ -816,7 +816,7 @@ img {
   content: "";
   width: 3.25rem;
   aspect-ratio: 1;
-  background-image: url("../../icons/hero/features-icon.svg");
+  background-image: url("../icons/hero/features-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1034,7 +1034,7 @@ img {
     margin-left: calc(-1 * var(--container-padding-x));
     padding-block: 6.25rem 2.5rem;
     padding-inline: 2.5rem calc(2.5rem - var(--container-padding-x));
-    background-image: url("../../images/hero/bg-tablet.png");
+    background-image: url("../images/hero/bg-tablet.png");
     background-size: contain;
   }
 }
@@ -1285,7 +1285,7 @@ img {
 }
 .tile__title--has-icon::after {
   content: "";
-  background-image: url("../../icons/hero/features-icon.svg");
+  background-image: url("../icons/hero/features-icon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1976,7 +1976,7 @@ img {
   content: "";
   width: 1rem;
   height: 0.5rem;
-  background-image: url("../../icons/down-arrow.svg");
+  background-image: url("../icons/down-arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
