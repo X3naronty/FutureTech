@@ -21,6 +21,13 @@ body {
     --iconWidth: 1em;
     --contentWidth: 100%;
     overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1,

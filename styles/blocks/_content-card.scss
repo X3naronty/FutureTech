@@ -3,6 +3,7 @@
 .content-card {
     display: grid;
     grid-template-columns: 37.5% 1fr;
+    // align-items: center;
 
     @include tablet {
         grid-template-columns: 1fr;

@@ -1,0 +1,82 @@
+@use '../helpers' as *;
+
+.select {
+    position: relative;
+
+    &__original-control {
+        display: none;
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        column-gap: fluid(6, 10);
+        &::after {
+            content: '';
+            width: rem(16);
+            height: rem(8);
+            background-image: url('../../icons/down-arrow.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            transition-duration: var(--transition-duration);
+        }
+        &.is-expanded {
+            &::after {
+                rotate: 180deg;
+            }
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        top: 105%;
+        left: 0;
+        right: 0;
+
+        max-height: rem(100);
+        overflow-y: auto;
+
+        background-color: var(--color-secondary-background);
+        border: var(--primary-border);
+        border-radius: var(--border-radius-secondary);
+
+        &.is-expanded {
+            display: block;
+        }
+    }
+
+    &__option {
+        // width: 100%;
+        user-select: none;
+        padding: rem(5) rem(7);
+        @include hover {
+            border: rem(1) solid var(--color-brand);
+            color: var(--color-brand);
+            background-color: var(--color-primary-background);
+        }
+
+        &.is-selected {
+            color: var(--color-primary-foreground);
+            &::after {
+                content: '✔';
+            }
+        }
+        
+        &.is-focused {
+            border: rem(1) solid var(--color-brand);
+            color: var(--color-brand);
+            background-color: var(--color-primary-background);
+        }
+
+        &:not(:where(:last-child, :hover)) {
+            border-bottom: var(--primary-border);
+        }
+    }
+}

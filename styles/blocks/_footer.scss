@@ -2,6 +2,7 @@
 
 .footer {
     color: var(--color-tertiary-foreground);
+    border-top: var(--primary-border);
 
     &__nav {
         display: grid;

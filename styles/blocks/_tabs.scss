@@ -7,6 +7,14 @@
         border-bottom: var(--primary-border);
     }
 
+    &__content {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
     &__list {
         display: grid;
         column-gap: rem(20);

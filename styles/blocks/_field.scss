@@ -7,7 +7,7 @@
     border: var(--primary-border);
     color: var(--color-primary-foreground);
 
-    &:hover {
+    @include hover {
         border-color: var(--color-brand);
     }
 }

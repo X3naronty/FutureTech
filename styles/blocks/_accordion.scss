@@ -1,15 +1,12 @@
 @use '../helpers' as *;
 
 .accordion {
-    --summaryBorder: none;
-    --summaryPadding: 0;
-    padding: fluid(24, 34);
     background-color: var(--color-secondary-background);
     border-radius: var(--border-radius-secondary);
     transition-duration: 0.5s;
 
-    &[open] {
-        .accordion__summary {
+    &.is-opened {
+        .accordion__indicator {
             &::after,
             &::before {
                 border-color: var(--color-primary-foreground);
@@ -19,53 +16,64 @@
                 rotate: 0deg;
             }
         }
-        
-        & .accordion__details {
+
+        & .accordion__content {
             grid-template-rows: 1fr;
+            
+        }
+
+        & .accordion__summary {
+            padding-bottom: fluid(16, 24);
         }
     }
 
-    @keyframes grid {
-        from {
-            grid-template-columns: 0fr;
-        } 
-        to {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__details {
+    &__content {
         display: grid;
         grid-template-rows: 0fr;
-        transition-duration: 0.4s;
+        transition-duration: 0.5s;
 
-       
-    }
-    &__inner {
-        overflow: hidden;
-    }
-    &__summary {
-        user-select: none;
-        color: var(--color-primary-foreground);
-        position: relative;
-        list-style: none;
+        padding-inline: fluid(24, 34);
 
-        @include hover {
-            color: var(--color-brand);
+        &-inner {
+            overflow: hidden;
         }
+
+        &-description {
+            padding-top: fluid(16, 24);
+            padding-bottom: fluid(24, 34);
+            border-top: var(--primary-border);
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: inherit;
+    }
+
+    &__indicator {
+        display: inline-flex;
+        position: relative;
+        width: rem(16);
+        height: rem(16);
+        aspect-ratio: 1;
 
         &::before,
         &::after {
             content: '';
             display: block;
             width: rem(16);
-            height: rem(2);
             border-top: rem(3) solid var(--color-brand);
-            right: 0;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+
             position: absolute;
             border-radius: rem(3);
-            top: 50%;
-            translate: -50%;
         }
 
         &::after {
@@ -74,14 +82,17 @@
         }
     }
 
-    &__title {
-        color: inherit;
+    &__summary {
+        padding: fluid(24, 34);
+        user-select: none;
+        color: var(--color-primary-foreground);
+
+        @include hover {
+            color: var(--color-brand);
+        }
     }
 
-    &__details {
-        // margin-top: fluid(15, 24);
-        // border-top: var(--primary-border);
-        // padding-top: fluid(16, 24);
-        // transition-duration: 0.5s;
+    &__title {
+        color: inherit;
     }
 }

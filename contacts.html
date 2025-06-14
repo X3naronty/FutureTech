@@ -20,7 +20,7 @@
             </div>
             <div class="header__body">
                 <div class="header__body-inner container">
-                    <a class="header__home-link" href="/" title="Go to home page">
+                    <a class="header__home-link" href="index.html" title="Go to home page">
                         <svg
                             width="179"
                             height="50"
@@ -117,20 +117,20 @@
                         <nav class="header__nav">
                             <ul class="header__nav-list">
                                 <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">Home</a>
+                                    <a href="index.html" class="header__nav-link">Home</a>
                                 </li>
                                 <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">News</a>
+                                    <a href="news.html" class="header__nav-link">News</a>
                                 </li>
                                 <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">Podcasts</a>
+                                    <a href="podcasts.html" class="header__nav-link">Podcasts</a>
                                 </li>
                                 <li class="header__nav-item">
-                                    <a href="/" class="header__nav-link">Resources</a>
+                                    <a href="resources.html" class="header__nav-link">Resources</a>
                                 </li>
                             </ul>
                         </nav>
-                        <a href="/" class="header__contact-us-link button button_accent">Contact Us</a>
+                        <a href="contacts.html" class="header__contact-us-link button button_accent">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,10 @@
         <main class="main">
             <h1 class="visually-hidden">Contact with us</h1>
             <!-- Contacts -->
-            <section class="section">
+            <section class="section" aria-describedby="contacts-quick-access-links-title">
+                <h2 class="visually-hidden" id="contacts-quick-access-links-title">
+                    Quick access links
+                </h2>
                 <div class="contacts container">
                     <ul class="contacts__list separation-list separation-list_grid-4-cols">
                         <li class="separation-list__item">
@@ -227,7 +230,7 @@
                                     <div class="footer__soc1als soc1als">
                                         <ul class="soc1als__list">
                                             <li class="soc1als__item">
-                                                <a href="/" class="soc1als__link soc1als__link_huge">
+                                                <a href="/" class="soc1als__link soc1als__link_huge" title="link to the X">
                                                     <svg
                                                         class="soc1als__icon icon-with-hover"
                                                         width="24"
@@ -244,7 +247,7 @@
                                                 </a>
                                             </li>
                                             <li class="soc1als__item">
-                                                <a href="/" class="soc1als__link soc1als__link_huge">
+                                                <a href="/" class="soc1als__link soc1als__link_huge" title="link to the Medium">
                                                     <svg
                                                         class="soc1als__icon icon-with-hover"
                                                         width="24"
@@ -269,7 +272,7 @@
                                                 </a>
                                             </li>
                                             <li class="soc1als__item">
-                                                <a href="/" class="soc1als__link soc1als__link_huge">
+                                                <a href="/" class="soc1als__link soc1als__link_huge" title="link to the LinkedIn">
                                                     <svg
                                                         class="soc1als__icon icon-with-hover"
                                                         width="22"
@@ -375,14 +378,93 @@
                                 </div>
                                 <div class="content-card__area">
                                     <div class="podcasts-form__fragment">
-                                        <label for="telInput" class="podcasts-form__label">
+                                        <label
+                                            for="telInput"
+                                            class="podcasts-form__label"
+                                            id="phone-number-select-prefix-label"
+                                        >
                                             Phone Number
                                             <span class="podcasts-form__marker">*</span>
                                         </label>
                                         <div class="podcasts-form__tel-input">
-                                            <select name="" id="telPrefixInput" class="field">
-                                                <option value="+375" selected>Bel</option>
-                                            </select>
+                                            <div class="select podcasts-form__select" data-js-select>
+                                                <div class="select__label">Choose telephone prefix</div>
+                                                <select
+                                                    name=""
+                                                    id="telPrefixInput"
+                                                    class="field select__original-control"
+                                                    tabindex="-1"
+                                                    aria-hidden="true"
+                                                    data-js-select-original-control
+                                                >
+                                                    <option value="+375" >Bel</option>
+                                                    <option value="+375" >Bel</option>
+                                                    <option value="+375" >Bel</option>
+                                                    <option value="+375" >Bel</option>
+                                                </select>
+
+                                                <div class="select__body">
+                                                    <div
+                                                        class="select__button field"
+                                                        tabindex="0"
+                                                        role="combobox"
+                                                        aria-expanded="false"
+                                                        aria-haspopup="listbox"
+                                                        aria-controls="phone-number-select-prefix-dropdown"
+                                                        aria-labelledby="phone-number-select-prefix-label"
+                                                        data-js-select-button
+                                                    >
+                                                        +7
+                                                    </div>
+                                                    <div
+                                                        class="select__dropdown"
+                                                        id="phone-number-select-prefix-dropdown"
+                                                        role="listbox"
+                                                        aria-labelledby="phone-number-select-prefix-label"
+                                                        tabindex="-1"
+                                                        data-js-select-dropdown
+                                                    >
+                                                        <div
+                                                            class="select__option"
+                                                            role="option"
+                                                            aria-selected="true"
+                                                            id="phone-number-prefix-select-option-1"
+                                                            data-js-select-option
+                                                            data-js-selected
+                                                        >
+                                                            +7
+                                                        </div>
+                                                        <div
+                                                            class="select__option"
+                                                            role="option"
+                                                            aria-selected="false"
+                                                            id="phone-number-prefix-select-option-2"
+                                                            data-js-select-option
+                                                        >
+                                                            +2
+                                                        </div>
+                                                        <div
+                                                            class="select__option"
+                                                            role="option"
+                                                            aria-selected="false"
+                                                            id="phone-number-prefix-select-option-3"
+                                                            data-js-select-option
+                                                        >
+                                                            +3
+                                                        </div>
+                                                        <div
+                                                            class="select__option"
+                                                            role="option"
+                                                            aria-selected="false"
+                                                            id="phone-number-prefix-select-option-4"
+                                                            data-js-select-option
+                                                        >
+                                                            +4
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <input
                                                 type="tel"
                                                 id="telInput"
@@ -457,85 +539,130 @@
                                     </a>
                                 </div>
                             </header>
-                            <div class="content-card__body content-card__body_1-col">
-                                <div class="content-card__area">
-                                    <details class="accordion" name="faq">
-                                        <summary class="accordion__summary">
+                            <dl class="content-card__body content-card__body_1-col" data-js-faq>
+                                <div class="content-card__area accordion" data-js-accordion>
+                                    <dt class="accordion__summary" data-js-accordion-summary>
+                                        <button
+                                            class="accordion__button"
+                                            aria-expanded="false"
+                                            aria-controls="accordionContent1"
+                                            data-js-accordion-button
+                                        >
                                             <h3 class="accordion__title h6">What is AI?</h3>
-                                        </summary>
-                                        <div class="accordion__details">
-                                            <div class="accordion__inner">
-                                                <div class="accordion__description">
-                                                    <p>
-                                                        AI stands for Artificial Intelligence, which refers to the
-                                                        simulation of human intelligence in machines. It enables them to
-                                                        perform tasks like problem-solving, learning, and decision-making.
-                                                    </p>
-                                                </div>
+                                            <span class="accordion__indicator"></span>
+                                        </button>
+                                    </dt>
+                                    <dd class="accordion__content" data-js-accordion-content>
+                                        <div class="accordion__content-inner" id="accordionContent1">
+                                            <div class="accordion__content-description">
+                                                <p>
+                                                    AI stands for Artificial Intelligence, which refers to the
+                                                    simulation of human intelligence in machines. It enables them to
+                                                    perform tasks like problem-solving, learning, and decision-making.
+                                                </p>
                                             </div>
                                         </div>
-                                    </details>
-                                    
+                                    </dd>
                                 </div>
-                                <div class="content-card__area">
-                                    <details class="accordion" name="faq">
-                                        <summary class="accordion__summary">
+                                <div class="content-card__area accordion" data-js-accordion>
+                                    <dt class="accordion__summary" data-js-accordion-summary>
+                                        <button
+                                            class="accordion__button"
+                                            aria-expanded="false"
+                                            aria-controls="accordionContent2"
+                                            data-js-accordion-button
+                                        >
                                             <h3 class="accordion__title h6">How can I listen to your podcasts?</h3>
-                                        </summary>
-                                        <div class="accordion__details">
-                                            <p>
-                                                AI stands for Artificial Intelligence, which refers to the simulation of
-                                                human intelligence in machines. It enables them to perform tasks like
-                                                problem-solving, learning, and decision-making.
-                                            </p>
+                                            <span class="accordion__indicator"></span>
+                                        </button>
+                                    </dt>
+                                    <dd class="accordion__content" data-js-accordion-content>
+                                        <div class="accordion__content-inner" id="accordionContent2">
+                                            <div class="accordion__content-description">
+                                                <p>
+                                                    AI stands for Artificial Intelligence, which refers to the
+                                                    simulation of human intelligence in machines. It enables them to
+                                                    perform tasks like problem-solving, learning, and decision-making.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </details>
+                                    </dd>
                                 </div>
-                                <div class="content-card__area">
-                                    <details class="accordion" name="faq">
-                                        <summary class="accordion__summary">
+                                <div class="content-card__area accordion" data-js-accordion>
+                                    <dt class="accordion__summary" data-js-accordion-summary>
+                                        <button
+                                            class="accordion__button"
+                                            aria-expanded="false"
+                                            aria-controls="accordionContent3"
+                                            data-js-accordion-button
+                                        >
                                             <h3 class="accordion__title h6">Are your podcasts free to listen to?</h3>
-                                        </summary>
-                                        <div class="accordion__details">
-                                            <p>
-                                                AI stands for Artificial Intelligence, which refers to the simulation of
-                                                human intelligence in machines. It enables them to perform tasks like
-                                                problem-solving, learning, and decision-making.
-                                            </p>
+                                            <span class="accordion__indicator"></span>
+                                        </button>
+                                    </dt>
+                                    <dd class="accordion__content" data-js-accordion-content>
+                                        <div class="accordion__content-inner" id="accordionContent3">
+                                            <div class="accordion__content-description">
+                                                <p>
+                                                    AI stands for Artificial Intelligence, which refers to the
+                                                    simulation of human intelligence in machines. It enables them to
+                                                    perform tasks like problem-solving, learning, and decision-making.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </details>
+                                    </dd>
                                 </div>
-                                <div class="content-card__area">
-                                    <details class="accordion" name="faq">
-                                        <summary class="accordion__summary">
+                                <div class="content-card__area accordion" data-js-accordion>
+                                    <dt class="accordion__summary" data-js-accordion-summary>
+                                        <button
+                                            class="accordion__button"
+                                            aria-expanded="false"
+                                            aria-controls="accordionContent4"
+                                            data-js-accordion-button
+                                        >
                                             <h3 class="accordion__title h6">
                                                 Can I download episodes to listen offline?
                                             </h3>
-                                        </summary>
-                                        <div class="accordion__details">
-                                            <p>
-                                                AI stands for Artificial Intelligence, which refers to the simulation of
-                                                human intelligence in machines. It enables them to perform tasks like
-                                                problem-solving, learning, and decision-making.
-                                            </p>
+                                            <span class="accordion__indicator"></span>
+                                        </button>
+                                    </dt>
+                                    <dd class="accordion__content" data-js-accordion-content>
+                                        <div class="accordion__content-inner" id="accordionContent4">
+                                            <div class="accordion__content-description">
+                                                <p>
+                                                    AI stands for Artificial Intelligence, which refers to the
+                                                    simulation of human intelligence in machines. It enables them to
+                                                    perform tasks like problem-solving, learning, and decision-making.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </details>
+                                    </dd>
                                 </div>
-                                <div class="content-card__area">
-                                    <details class="accordion" name="faq">
-                                        <summary class="accordion__summary">
+                                <div class="content-card__area accordion" data-js-accordion>
+                                    <dt class="accordion__summary" data-js-accordion-summary>
+                                        <button
+                                            class="accordion__button"
+                                            aria-expanded="false"
+                                            aria-controls="accordionContent5"
+                                            data-js-accordion-button
+                                        >
                                             <h3 class="accordion__title h6">How often do you release new episodes?</h3>
-                                        </summary>
-                                        <div class="accordion__details">
-                                            <p>
-                                                AI stands for Artificial Intelligence, which refers to the simulation of
-                                                human intelligence in machines. It enables them to perform tasks like
-                                                problem-solving, learning, and decision-making.
-                                            </p>
+                                            <span class="accordion__indicator"></span>
+                                        </button>
+                                    </dt>
+                                    <dd class="accordion__content" data-js-accordion-content>
+                                        <div class="accordion__content-inner" id="accordionContent5">
+                                            <div class="accordion__content-description">
+                                                <p>
+                                                    AI stands for Artificial Intelligence, which refers to the
+                                                    simulation of human intelligence in machines. It enables them to
+                                                    perform tasks like problem-solving, learning, and decision-making.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </details>
+                                    </dd>
                                 </div>
-                            </div>
+                            </dl>
                         </div>
                     </section>
                 </div>
@@ -759,14 +886,14 @@
                                 <a href="/" class="footer__policy-link">Terms & Conditions</a>
                             </li>
                             <li class="footer__policy-item">
-                                <a href="/" class="footer__policy-link">Privary Policy</a>
+                                <a href="/" class="footer__policy-link">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer__soc1als soc1als">
                         <ul class="soc1als__list">
                             <li class="soc1als__item">
-                                <a href="/" class="soc1als__link">
+                                <a href="/" class="soc1als__link" title="Link to the X">
                                     <svg
                                         class="soc1als__icon icon-with-hover"
                                         width="24"
@@ -783,7 +910,7 @@
                                 </a>
                             </li>
                             <li class="soc1als__item">
-                                <a href="/" class="soc1als__link">
+                                <a href="/" class="soc1als__link" title="Link to the Medium">
                                     <svg
                                         class="soc1als__icon icon-with-hover"
                                         width="24"
@@ -808,7 +935,7 @@
                                 </a>
                             </li>
                             <li class="soc1als__item">
-                                <a href="/" class="soc1als__link">
+                                <a href="/" class="soc1als__link" title="link to the LinkedIn">
                                     <svg
                                         class="soc1als__icon icon-with-hover"
                                         width="22"
