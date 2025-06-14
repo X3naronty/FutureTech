@@ -1,42 +1,42 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter24pt-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Inter24pt-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter24pt-Regular.woff2") format("woff2");
+  src: url("../fonts/Inter24pt-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter24pt-Medium.woff2") format("woff2");
+  src: url("../fonts/Inter24pt-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Kumbh Sans";
-  src: url("/fonts/KumbhSans-Medium.woff2") format("woff2");
+  src: url("../fonts/KumbhSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter24pt-Bold.woff2") format("woff2");
+  src: url("../fonts/Inter24pt-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Kumbh Sans";
-  src: url("/fonts/KumbhSans-Regular.woff2") format("woff2");
+  src: url("../fonts/KumbhSans-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -848,6 +848,7 @@ img {
 }
 .metrics-card__value {
   font-weight: 600;
+  font-family: "Inter";
 }
 .metrics-card__value_accent {
   display: inline-block;
